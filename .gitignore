@@ -1,0 +1,54 @@
+# ── Python ────────────────────────────────────────────────────────────────────
+venv/
+.venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+
+# ── Secrets ───────────────────────────────────────────────────────────────────
+.env
+.env.local
+.env.*.local
+
+# ── Logs ──────────────────────────────────────────────────────────────────────
+*.log
+logs/
+backend/logs/
+backend/log/
+
+# ── RAG runtime artifacts (rebuilt from rag/documents/ on first boot) ─────────
+rag/vectorstore/faiss.index
+rag/vectorstore/bm25.json
+rag/vectorstore/documents.json
+rag/embeddings/
+backend/rag/vectorstore/
+backend/rag/embeddings/
+
+# ── Session / memory files ────────────────────────────────────────────────────
+memory_sessions/
+backend/memory/session_*.json
+backend/memory_store/
+*.pkl
+
+# ── Frontend ──────────────────────────────────────────────────────────────────
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+frontend/.next/
+
+# ── OS / IDE ──────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# ── Build / test artifacts ────────────────────────────────────────────────────
+setup.log
+*.log
+backend/test_results.json
+backend/test_results_improved.json
+backend/services/qa_log.jsonl
+uploads/

@@ -1,0 +1,42 @@
+# ── Web Framework ─────────────────────────────────────────────────────────────
+fastapi==0.104.1
+uvicorn==0.24.0
+python-multipart==0.0.6
+
+# ── Data Validation ───────────────────────────────────────────────────────────
+pydantic==2.11.9
+pydantic-core==2.33.2
+pydantic[email]>=2.7.0
+pydantic-settings==2.10.1
+
+# ── LLM ───────────────────────────────────────────────────────────────────────
+groq==0.31.0
+
+# ── RAG / Embeddings ──────────────────────────────────────────────────────────
+sentence-transformers==5.1.0
+faiss-cpu==1.12.0
+langchain==0.3.27
+langchain-community==0.3.29
+langchain-core==0.3.75
+huggingface-hub==0.34.4
+tiktoken==0.11.0
+transformers==4.56.0
+rank-bm25==0.2.2
+
+# ── Scientific Computing ──────────────────────────────────────────────────────
+numpy==2.3.2
+scikit-learn==1.7.1
+scipy==1.16.1
+
+# ── Document Processing ───────────────────────────────────────────────────────
+PyPDF2==3.0.1
+python-docx==1.2.0
+
+# ── Email ─────────────────────────────────────────────────────────────────────
+resend>=2.0.0
+
+# ── Utilities ─────────────────────────────────────────────────────────────────
+python-dotenv==1.0.0
+requests==2.32.5
+rich==14.1.0
+tqdm==4.67.1

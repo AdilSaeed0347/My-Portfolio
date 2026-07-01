@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - Adil Saeed | AI Engineer</title>
+  <!-- ADD THIS AS THE FIRST SCRIPT IN <head> -->
+<script src="../env.js"></script>
+<script src="../config.js"></script>
+  <link rel="stylesheet" href="../styles/global.css">
+  <link rel="stylesheet" href="../styles/about.css">
+  <link rel="stylesheet" href="../styles/chatbot.css">
+</head>
+<body>
+  <div class="page-wrapper">
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <h2 class="nav-logo">
+          <img src="../documents/logo.png" alt="Logo" class="nav-logo-icon">
+          <span class="nav-logo-text">XAdilTeam</span>
+        </h2>
+        <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-links">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html" class="active" aria-current="page">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="menu-overlay"></div>
+
+    <!-- About Details Section -->
+    <main>
+      <section class="about-details">
+        <div class="container">
+          <h2>About Me</h2>
+          <div class="action-buttons">
+            <div class="hire-wrapper">
+              <button class="btn-primary hire-btn" type="button" aria-expanded="false" aria-controls="hire-options">
+                Hire Me
+              </button>
+              <div class="hire-options" id="hire-options">
+                <a href="mailto:contact@xadilteam.com?subject=Hiring%20Inquiry" class="hire-option" data-tooltip="Fast response guaranteed! Direct email communication">📧 Email for Job Offer</a>
+                <a href="https://calendly.com/adil-hire" target="_blank" rel="noopener noreferrer" class="hire-option" data-tooltip="Book a convenient time slot for interview or discussion">📅 Schedule a Call</a>
+                <a href="contact.html" class="hire-option" data-tooltip="Perfect for project-based work and collaborations">🤝 Freelance Collaboration</a>
+              </div>
+            </div>
+            <a href="../documents/AdilSaeed_CV.pdf" class="btn-primary resume-btn" target="_blank" rel="noopener noreferrer">📄 My Resume</a>
+          </div>
+          <div class="about-text">
+            <p>I'm <b>Adil Saeed</b>, a Software Engineering student at IMSciences Peshawar, driven by a passion for Artificial Intelligence, Machine Learning, Deep Learning, NLP, Computer Vision, and Large Language Models. My journey includes hands-on experience from the GIKI ML → LLM Bootcamp 2025 and a visit to SkyElectric, inspiring me to tackle real-world challenges with innovative solutions.</p>
+          </div>
+          <div class="skills">
+            <div class="skill-category">
+              <h3>Machine Learning</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">Python (NumPy, Pandas, Scikit-learn)</span>
+                <span class="skill-tag">Regression & Classification</span>
+                <span class="skill-tag">Data Preprocessing & Feature Engineering</span>
+                <span class="skill-tag">Model Evaluation & Metrics</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h3>Deep Learning</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">TensorFlow / Keras</span>
+                <span class="skill-tag">CNN, RNN, LSTM</span>
+                <span class="skill-tag">Computer Vision (OpenCV)</span>
+                <span class="skill-tag">PyTorch</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h3>Large Language Models</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">NLP</span>
+                <span class="skill-tag">Transformers / HuggingFace</span>
+                <span class="skill-tag">LLMs (GPT, BERT)</span>
+                <span class="skill-tag">Fine-tuning & Prompt Engineering</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <!-- Footer -->
+  <div id="footer-container"></div>
+  <!-- Scripts -->
+  <script src="../utils/navigation.js"></script>
+  <script src="../utils/common.js"></script>
+  <script src="../utils/chatbot.js"></script>
+  <script src="../utils/about.js"></script>
+</body>
+</html>

@@ -1,0 +1,713 @@
+/* ============================================================================
+   GLOBAL.CSS - Portfolio Website Global Styles
+   Professional, Mobile-Responsive, Optimized
+   ============================================================================ */
+
+/* ============================================================================
+   1. CSS RESET & BASE STYLES
+   - Removes browser default styling for consistency
+   ============================================================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Includes padding/border in element width */
+}
+
+html {
+    overflow-y: scroll; /* Always show scrollbar to prevent layout shift */
+    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6; /* Comfortable reading spacing */
+    color: #333; /* Dark gray text for readability */
+    background-color: #f8f9fa; /* Light gray background */
+    font-size: 16px; /* Base font size for rem calculations */
+}
+
+/* ============================================================================
+   2. PAGE LAYOUT STRUCTURE
+   - Ensures footer stays at bottom even with minimal content
+   ============================================================================ */
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Full viewport height */
+}
+
+/* Main content grows to push footer down */
+.hero-section,
+.main-content {
+    flex: 1;
+}
+
+/* ============================================================================
+   3. REUSABLE CONTAINER
+   - Centers content with consistent max-width across all pages
+   ============================================================================ */
+
+.container {
+    max-width: 1200px; /* Desktop max width */
+    margin: 0 auto; /* Center horizontally */
+    padding: 0 20px; /* Side padding for breathing room */
+    width: 100%; /* Full width within constraints */
+}
+
+/* ============================================================================
+   4. FIXED NAVIGATION BAR
+   - Stays at top while scrolling
+   ============================================================================ */
+
+.navbar {
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Above all other content */
+    transition: box-shadow 0.3s ease;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+/* ============================================================================
+   5. LOGO STYLING WITH ANIMATION
+   - Circular profile image with subtle pulse effect
+   ============================================================================ */
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Space between icon and text */
+    font-size: 1.6em;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.nav-logo-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%; /* Circular shape */
+    object-fit: cover; /* Maintain aspect ratio */
+    box-shadow: 0 2px 5px rgba(244, 162, 97, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    animation: logoPulse 3s infinite ease-in-out; /* Breathing effect */
+}
+
+.nav-logo-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3em;
+    font-weight: 600;
+    color: #2a4365; /* Deep slate blue */
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    transition: color 0.3s ease;
+}
+
+/* Logo hover effects */
+.nav-logo:hover .nav-logo-icon {
+    transform: scale(1.1); /* Slight zoom */
+    box-shadow: 0 4px 10px rgba(244, 162, 97, 0.4);
+}
+
+.nav-logo:hover .nav-logo-text {
+    color: #f4a261; /* Warm gold */
+}
+
+/* Logo pulse animation */
+@keyframes logoPulse {
+    0%, 100% {
+        filter: brightness(1) drop-shadow(0 0 2px rgba(255, 255, 255, 0.3));
+        transform: scale(1);
+        opacity: 0.95;
+    }
+    50% {
+        filter: brightness(1.2) drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+        transform: scale(1.03);
+        opacity: 1;
+    }
+}
+
+/* ============================================================================
+   6. NAVIGATION LINKS
+   - Horizontal menu with hover effects
+   ============================================================================ */
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #4a5568;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    position: relative;
+    padding: 8px 16px;
+    border-radius: 10px;
+    display: inline-block;
+    transition: all 0.3s ease;
+    font-size: 1em;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    left: 0;
+    bottom: -3px;
+    background: linear-gradient(90deg, #f4a261, #e76f51);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-links a:hover {
+    color: #e76f51;
+    background-color: rgba(231, 111, 81, 0.1);
+}
+
+.nav-links a.active {
+    color: #ffffff;
+    background: linear-gradient(135deg, #f4a261, #e76f51);
+    font-weight: 600;
+    position: relative;
+    z-index: 1;
+    padding: 8px 16px;
+    border-radius: 10px;
+}
+
+.nav-links a.active::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    background: linear-gradient(135deg, #f4a261, #e76f51);
+    border-radius: 12px;
+    z-index: -1;
+    opacity: 0.85;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a.active:hover::before {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+/* Hamburger Menu Button */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    z-index: 1001;
+    min-width: 44px;
+    min-height: 44px;
+    justify-content: center;
+    align-items: center;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #4a5568;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* ============================================================================
+   7. MAIN CONTENT SPACING
+   - Accounts for fixed navbar height
+   ============================================================================ */
+
+.main-content {
+    margin-top: 70px; /* Navbar height offset */
+    min-height: calc(100vh - 70px); /* Minimum full viewport minus navbar */
+}
+
+/* ============================================================================
+   8. HERO SECTION
+   - Banner at top of each page
+   ============================================================================ */
+
+.hero-section {
+    background: linear-gradient(135deg, #f8f8f9 0%, #e1dee5 100%);
+    color: rgb(10, 9, 9);
+    padding: 40px 0;
+    text-align: center;
+    max-height: 380px;
+}
+
+.hero-section h1 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.hero-section p {
+    font-size: 1em;
+    max-width: 500px;
+    margin: 0 auto 20px;
+    opacity: 0.9;
+}
+
+/* ============================================================================
+   9. BUTTON STYLES
+   - Primary and secondary button designs
+   ============================================================================ */
+
+.btn-primary {
+    background: #2563eb; /* Blue background */
+    color: white;
+    padding: 10px 25px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    display: inline-block;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background: #1d4ed8; /* Darker blue */
+    transform: translateY(-2px); /* Lift effect */
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #2563eb;
+    padding: 10px 25px;
+    text-decoration: none;
+    border: 2px solid #2563eb;
+    border-radius: 8px;
+    font-weight: 600;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background: #2563eb;
+    color: white;
+}
+
+/* ============================================================================
+   10. UTILITY CLASSES
+   - Reusable helper classes
+   ============================================================================ */
+
+.hidden {
+    display: none !important;
+}
+
+.highlight {
+    color: #fbbf24; /* Yellow highlight */
+}
+
+/* ============================================================================
+   11. FOOTER STYLES
+   - Sticky footer at bottom of page
+   ============================================================================ */
+
+.footer {
+    background: #3a3f47; /* Dark gray */
+    color: #fff;
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 14px 20px;
+    margin-top: auto; /* Pushes to bottom */
+}
+
+.footer .footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer .footer-text {
+    color: #aaa; /* Light gray text */
+    font-size: 15px;
+    margin: 0;
+    text-align: center;
+}
+
+/* ============================================================================
+   12. CHATBOT STYLES
+   - Chat interface components
+   ============================================================================ */
+
+/* Chatbot header with static blue background */
+.chat-header {
+    background: #007bff; /* Solid blue */
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Animated chatbot title with gradient shine effect */
+.chat-header h3 {
+    font-size: 20px;
+    font-weight: bold;
+    background: linear-gradient(
+        90deg,
+        #ffffff 0%,
+        #6dd5ed 20%,
+        #70bfd2 40%,
+        #caedde 60%,
+        #70cee3 80%,
+        #ffffff 100%
+    );
+    background-size: 300% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 8s linear infinite;
+}
+
+/* Gradient animation for text */
+@keyframes shine {
+    to {
+        background-position: 200% center;
+    }
+}
+
+/* Close button for chatbot */
+.close-chat {
+    all: unset; /* Reset all default styles */
+    cursor: pointer;
+    font-size: 1.6rem;
+    color: #fdf9f9;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.3rem;
+    height: 1.3rem;
+    line-height: 1;
+    border-radius: 50%; /* Circular button */
+    transition: background 0.25s ease, color 0.25s ease, transform 0.2s ease;
+}
+
+.close-chat:hover {
+    background: rgb(250, 121, 121); /* Red on hover */
+    color: #fff;
+}
+
+.close-chat:active {
+    transform: scale(0.9); /* Shrink on click */
+}
+
+/* ============================================================================
+   13. MOBILE RESPONSIVE DESIGN - MOBILE FIRST
+   - Progressive enhancement for larger screens
+   ============================================================================ */
+
+/* Tablet (768px and below) - Hamburger Menu */
+@media (max-width: 768px) {
+    .nav-container {
+        padding: 0 20px;
+        height: 70px;
+        flex-direction: row;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 280px;
+        height: calc(100vh - 70px);
+        background: #ffffff;
+        flex-direction: column;
+        gap: 0;
+        padding: 20px 0;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+        transition: left 0.3s ease;
+        overflow-y: auto;
+        z-index: 999;
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links a {
+        width: 100%;
+        padding: 16px 24px;
+        border-radius: 0;
+        font-size: 1rem;
+        justify-content: flex-start;
+    }
+
+    .nav-links a::after {
+        display: none;
+    }
+
+    .nav-links a:hover {
+        background-color: rgba(231, 111, 81, 0.05);
+    }
+
+    .nav-links a.active {
+        border-left: 4px solid #f4a261;
+        background: rgba(244, 162, 97, 0.1);
+        color: #e76f51;
+        border-radius: 0;
+    }
+
+    .nav-links a.active::before {
+        display: none;
+    }
+
+    .nav-logo {
+        font-size: 1.3em;
+    }
+
+    .nav-logo-icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    .nav-logo-text {
+        font-size: 1.1em;
+    }
+
+    .main-content {
+        margin-top: 70px;
+    }
+
+    .hero-section {
+        padding: 30px 0;
+        max-height: none;
+    }
+
+    .hero-section h1 {
+        font-size: clamp(1.5rem, 5vw, 2rem);
+    }
+
+    .hero-section p {
+        font-size: 0.9em;
+        max-width: 90%;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        padding: 12px 24px;
+        font-size: 0.95em;
+        min-height: 44px;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+}
+
+/* Menu Overlay */
+.menu-overlay {
+    display: none;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.menu-overlay.active {
+    display: block;
+    opacity: 1;
+}
+
+/* Small Mobile (480px and below) */
+@media (max-width: 480px) {
+    body {
+        font-size: 15px;
+    }
+
+    .nav-container {
+        padding: 0 15px;
+    }
+
+    .nav-logo {
+        font-size: 1.15em;
+    }
+
+    .nav-logo-icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    .nav-logo-text {
+        font-size: 1em;
+    }
+
+    .nav-links {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .nav-links a {
+        font-size: 0.95rem;
+        padding: 14px 20px;
+    }
+
+    .hero-section {
+        padding: 24px 0;
+    }
+
+    .hero-section h1 {
+        font-size: clamp(1.3rem, 6vw, 1.8rem);
+    }
+
+    .hero-section p {
+        font-size: 0.9em;
+    }
+
+    .container {
+        padding: 0 12px;
+    }
+
+    .footer {
+        padding: 12px 15px;
+        min-height: 54px;
+    }
+
+    .footer .footer-text {
+        font-size: 14px;
+    }
+
+    .chat-header h3 {
+        font-size: 17px;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
+    }
+}
+
+/* Extra Small Mobile (360px and below) */
+@media (max-width: 360px) {
+    .nav-logo {
+        font-size: 1.05em;
+    }
+
+    .nav-logo-icon {
+        width: 26px;
+        height: 26px;
+    }
+
+    .nav-logo-text {
+        font-size: 0.95em;
+    }
+
+    .nav-links {
+        width: 100%;
+    }
+
+    .nav-links a {
+        font-size: 0.9rem;
+        padding: 12px 18px;
+    }
+
+    .hero-section h1 {
+        font-size: clamp(1.2rem, 7vw, 1.6rem);
+    }
+
+    .hero-section p {
+        font-size: 0.85em;
+    }
+
+    .container {
+        padding: 0 10px;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        padding: 10px 18px;
+        font-size: 0.9em;
+    }
+}
+
+/* ============================================================================
+   14. PERFORMANCE OPTIMIZATIONS
+   - Hardware acceleration and rendering improvements
+   ============================================================================ */
+
+/* Enable GPU acceleration for animations */
+.nav-logo-icon,
+.nav-links a,
+.btn-primary,
+.btn-secondary {
+    will-change: transform;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+/* Remove tap highlight on mobile */
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* ============================================================================
+   END OF GLOBAL.CSS
+   ============================================================================ */

@@ -1,0 +1,504 @@
+/* Base body styles for consistent typography and layout */
+body {
+    font-size: 16px; /* Default font size for readability */
+    color: #111; /* Text color for body content */
+    margin: 0; /* Remove default margins */
+    padding: 0; /* Remove default padding */
+    font-family: Arial, Helvetica, sans-serif; /* Fallback font stack for consistency */
+}
+
+/* Container for centering and constraining content width */
+.container {
+    width: 92%; /* Responsive width with slight margin */
+    max-width: 1200px; /* Maximum width to prevent overly wide content */
+    margin: 0 auto; /* Center horizontally */
+    padding: 0 12px; /* Small padding for mobile-friendliness */
+}
+
+/* About section with centered, styled content */
+.about-details {
+    background: #f9fafb; /* Light gray background for contrast */
+    padding: 50px 15px; /* Vertical and horizontal padding */
+    color: #111827; /* Dark text for readability */
+    display: flex; /* Flexbox for layout control */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center text */
+    border-radius: 0 0 16px 16px; /* Rounded bottom corners */
+    border: 1px solid #e5e7eb; /* Subtle border */
+    animation: smoothFadeUp 0.8s ease-out both; /* Fade-in animation */
+}
+
+/* Heading for about section with underline effect */
+.about-details h2 {
+    font-size: 1.7rem; /* Large heading size */
+    font-weight: 700; /* Bold for emphasis */
+    margin-bottom: 16px; /* Space below heading */
+    color: #1f2937; /* Darker gray for contrast */
+    position: relative; /* For pseudo-element positioning */
+}
+
+/* Underline effect for h2 */
+.about-details h2::after {
+    content: ""; /* Empty content for decorative line */
+    display: block; /* Block-level for full width */
+    width: 50px; /* Fixed width for underline */
+    height: 3px; /* Thin line height */
+    background: #3b82f6; /* Blue accent color */
+    margin: 10px auto 0; /* Center with top margin */
+    border-radius: 4px; /* Rounded edges */
+}
+
+/* Text content for about section */
+.about-text {
+    max-width: 720px; /* Constrain text width for readability */
+    margin: 0 auto 28px auto; /* Center with bottom margin */
+    font-size: 0.95rem; /* Slightly smaller font */
+    line-height: 1.65; /* Comfortable line spacing */
+    color: #1a1c1f; /* Dark text for contrast */
+    text-align: justify; /* Justify text for clean edges */
+    animation: smoothFadeUp 1s ease-out both 0.3s; /* Delayed fade-in animation */
+    padding: 0 15px; /* Horizontal padding for mobile */
+    overflow-wrap: break-word; /* Modern word-wrap to prevent overflow */
+    margin-top: -15px; /* Offset to adjust spacing */
+}
+
+/* Container for action buttons (Hire Me, Resume) */
+.action-buttons {
+    display: flex; /* Flexbox for button alignment */
+    justify-content: center; /* Center buttons horizontally */
+    align-items: flex-start; /* Align buttons at top */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 12px; /* Space between buttons */
+    margin-bottom: 30px; /* Space below buttons */
+    animation: smoothFadeUp 1s ease-out both 0.5s; /* Delayed fade-in animation */
+    position: relative; /* For z-index control */
+    z-index: 10; /* Ensure buttons are above other elements */
+}
+
+/* Base button styles for primary buttons (Hire Me, Resume) */
+.btn-primary {
+    width: 180px; /* Fixed width for consistent sizing */
+    min-width: 180px; /* Ensure minimum width */
+    height: 48px; /* Fixed height for alignment */
+    background: #3b82f6; /* Blue background */
+    color: #fff; /* White text */
+    padding: 12px 20px; /* Consistent padding */
+    border-radius: 10px; /* Rounded corners */
+    border: 1px solid transparent; /* Transparent border for hover effects */
+    cursor: pointer; /* Pointer cursor for interactivity */
+    font-weight: 600; /* Semi-bold text */
+    font-size: 1rem; /* Standard font size */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline for links */
+    transition: all 0.25s ease; /* Smooth transitions for hover effects */
+    box-sizing: border-box; /* Include padding in width/height */
+    display: inline-flex; /* Flex for centering content */
+    align-items: center; /* Vertical centering */
+    justify-content: center; /* Horizontal centering */
+    outline: none; /* Remove default outline */
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+/* Hover state for primary buttons */
+.btn-primary:hover {
+    background: #2563eb; /* Darker blue on hover */
+    transform: scale(1.05); /* Slight scale-up effect */
+    border-radius: 12px; /* Slightly rounder corners */
+}
+
+/* Focus state for accessibility */
+.btn-primary:focus {
+    outline: 2px solid #3b82f6; /* Blue outline for focus */
+    outline-offset: 2px; /* Offset outline for visibility */
+}
+
+/* Hire Me button specific styles */
+.hire-btn {
+    position: relative; /* For dropdown positioning */
+}
+
+/* Active state for Hire Me button (when dropdown is open) */
+.hire-btn.active {
+    background: #2563eb; /* Darker blue when active */
+    transform: scale(1.05); /* Slight scale-up */
+    border-radius: 12px; /* Match hover border-radius */
+}
+
+/* Dropdown arrow for Hire Me button */
+.hire-btn::after {
+   /* content: "▼";  Down arrow */
+    margin-left: 8px; /* Space from text */
+    font-size: 0.8rem; /* Smaller arrow */
+    transition: transform 0.3s ease; /* Smooth rotation */
+}
+
+/* Rotate arrow when dropdown is active */
+.hire-btn.active::after {
+    transform: rotate(180deg); /* Up arrow when active */
+}
+
+/* Wrapper for Hire Me button and dropdown */
+.hire-wrapper {
+    position: relative; /* For absolute positioning of dropdown */
+    display: inline-block; /* Keep inline with buttons */
+    z-index: 1000; /* Ensure dropdown is above other elements */
+}
+
+/* Dropdown menu for Hire Me options */
+.hire-options {
+    position: absolute; /* Position below button */
+    top: calc(100% + 8px); /* Space below button */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%) scale(0.95); /* Slightly scaled down initially */
+    transform-origin: top center; /* Scale from top */
+    background: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%); /* White to light gray gradient */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border: 1px solid #e5e7eb; /* Light border */
+    display: flex; /* Flexbox for vertical layout */
+    flex-direction: column; /* Stack options vertically */
+    width: 200px; /* Match button width closely */
+    opacity: 0; /* Hidden by default */
+    visibility: hidden; /* Not visible */
+    pointer-events: none; /* Disable interactions when hidden */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* Smooth show/hide */
+    z-index: 1001; /* Above button */
+    padding: 6px 0; /* Vertical padding */
+    backdrop-filter: blur(10px); /* Blur effect for modern look */
+    /* Fallback for browsers without backdrop-filter support */
+    background-color: rgba(255, 255, 255, 0.95);
+    text-align: left;
+}
+
+/* Show dropdown when active */
+.hire-options.show {
+    opacity: 1; /* Fully visible */
+    visibility: visible; /* Allow interactions */
+    pointer-events: auto; /* Enable clicks */
+    transform: translateX(-50%) scale(1); /* Full size */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); /* Stronger shadow when visible */
+}
+
+/* Individual dropdown options */
+.hire-option {
+    padding: 12px 16px; /* Compact padding */
+    color: #1f2937; /* Dark text */
+    text-decoration: none; /* No underline */
+    font-weight: 500; /* Medium weight */
+    font-size: 0.9rem; /* Slightly smaller font */
+    line-height: 1.3; /* Tight line height */
+    position: relative; /* For tooltip positioning */
+    transition: all 0.2s ease; /* Smooth hover effects */
+    display: block; /* Full-width clickable area */
+}
+
+/* Rounded corners for first dropdown option */
+.hire-option:first-child {
+    border-radius: 12px 12px 0 0; /* Top corners rounded */
+}
+
+/* Rounded corners for last dropdown option */
+.hire-option:last-child {
+    border-radius: 0 0 12px 12px; /* Bottom corners rounded */
+}
+
+/* Full rounded corners for single option */
+.hire-option:only-child {
+    border-radius: 12px; /* All corners rounded */
+}
+
+/* Hover state for dropdown options */
+.hire-option:hover {
+    background: linear-gradient(135deg, #eef2ff 0%, #e0e7ff 100%); /* Light blue gradient */
+    color: #3b82f6; /* Blue text */
+    transform: translateX(2px); /* Slight shift right */
+}
+
+/* Focus state for accessibility */
+.hire-option:focus {
+    outline: none; /* Remove default outline */
+    background: linear-gradient(135deg, #e0e7ff 0%, #dbeafe 100%); /* Slightly darker gradient */
+    color: #1d4ed8; /* Darker blue text */
+}
+
+/* Active state for click feedback */
+.hire-option:active {
+    transform: scale(0.98); /* Slight scale-down */
+}
+
+/* Tooltip for dropdown options */
+.hire-option[data-tooltip]::after {
+    content: attr(data-tooltip); /* Use data-tooltip attribute for text */
+    position: absolute; /* Position above option */
+    top: -2.5rem; /* Place above with fixed offset */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center align */
+    background: rgba(31, 29, 29, 0.95); /* Dark semi-transparent background */
+    color: white; /* White text */
+    font-size: 0.8rem; /* Small font */
+    font-weight: 400; /* Regular weight */
+    padding: 8px 12px; /* Compact padding */
+    border-radius: 6px; /* Rounded corners */
+    white-space: nowrap; /* Prevent wrapping */
+    opacity: 0; /* Hidden by default */
+    visibility: hidden; /* Not visible */
+    pointer-events: none; /* Disable interactions */
+    transition: all 0.3s ease; /* Smooth show/hide */
+    z-index: 1010; /* Above dropdown */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+/* Tooltip arrow pointing down */
+.hire-option[data-tooltip]::before {
+    content: ""; /* Empty for arrow */
+    position: absolute; /* Position below tooltip */
+    top: -0.5rem; /* Align with tooltip */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center align */
+    width: 0; /* Triangle shape */
+    height: 0; /* Triangle shape */
+    border-left: 6px solid transparent; /* Left side of triangle */
+    border-right: 6px solid transparent; /* Right side of triangle */
+    border-top: 6px solid rgba(31, 29, 29, 0.95); /* Match tooltip background */
+    opacity: 0; /* Hidden by default */
+    visibility: hidden; /* Not visible */
+    transition: all 0.3s ease; /* Smooth show/hide */
+    z-index: 1010; /* Above dropdown */
+}
+
+/* Show tooltip and arrow on hover */
+.hire-option[data-tooltip]:hover::after,
+.hire-option[data-tooltip]:hover::before {
+    opacity: 1; /* Fully visible */
+    visibility: visible; /* Allow visibility */
+}
+
+/* Smooth tooltip animation */
+.hire-option[data-tooltip]:hover::after {
+    transform: translateX(-50%) translateY(-4px); /* Slight upward shift */
+}
+
+/* Ensure tooltips don’t cause layout issues */
+.hire-options {
+    overflow: visible; /* Allow tooltips to appear outside dropdown */
+}
+
+/* Icons for dropdown options */
+.hire-option::before {
+    content: ""; /* Empty for icon */
+    width: 14px; /* Small icon size */
+    height: 14px; /* Square icon */
+    display: inline-block; /* Align with text */
+    margin-right: 8px; /* Space from text */
+    vertical-align: middle; /* Center vertically */
+    opacity: 0.7; /* Slightly faded */
+    transition: opacity 0.2s ease; /* Smooth opacity change */
+}
+
+/* Increase icon opacity on hover */
+.hire-option:hover::before {
+    opacity: 1; /* Fully opaque */
+}
+
+/* Email icon for mailto links */
+.hire-option[href*="mailto"]::before {
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%233b82f6' viewBox='0 0 24 24'%3E%3Cpath d='M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.89 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z'/%3E%3C/svg%3E") no-repeat center;
+    background-size: contain; /* Fit icon within bounds */
+}
+
+/* Calendar icon for Calendly links */
+.hire-option[href*="calendly"]::before {
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%233b82f6' viewBox='0 0 24 24'%3E%3Cpath d='M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z'/%3E%3C/svg%3E") no-repeat center;
+    background-size: contain; /* Fit icon within bounds */
+}
+
+/* Contact icon for contact links */
+.hire-option[href*="contact"]::before {
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%233b82f6' viewBox='0 0 24 24'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z'/%3E%3C/svg%3E") no-repeat center;
+    background-size: contain; /* Fit icon within bounds */
+}
+
+/* Skills section with grid layout */
+.skills {
+    display: grid; /* Grid for responsive layout */
+    grid-template-columns: 1fr; /* Single column by default */
+    gap: 20px; /* Space between skill categories */
+    max-width: 950px; /* Constrain width */
+    margin: 30px auto 0 auto; /* Center with top margin */
+    animation: smoothFadeUp 1s ease-out both 0.7s; /* Delayed fade-in animation */
+}
+
+/* Individual skill category card */
+.skill-category {
+    background: #fff; /* White background */
+    border: 1px solid #e5e7eb; /* Light border */
+    color: #111827; /* Dark text */
+    padding: 20px; /* Internal padding */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth hover effects */
+}
+
+/* Hover state for skill category */
+.skill-category:hover {
+    transform: scale(1.03); /* Slight scale-up */
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08); /* Stronger shadow */
+    border: 0.1px solid rgb(46, 41, 41); /* Darker border on hover */
+}
+
+/* Heading for skill category */
+.skill-category h3 {
+    font-size: 1.1rem; /* Moderate heading size */
+    margin-bottom: 10px; /* Space below heading */
+    color: #2563eb; /* Blue text */
+}
+
+/* Container for skill tags */
+.skill-tags {
+    display: flex; /* Flexbox for tag layout */
+    flex-wrap: wrap; /* Allow wrapping */
+    gap: 8px; /* Space between tags */
+}
+
+/* Individual skill tag */
+.skill-tag {
+    background: #eff6ff; /* Light blue background */
+    color: #1e40af; /* Dark blue text */
+    padding: 7px 14px; /* Compact padding */
+    border-radius: 8px; /* Rounded corners */
+    font-size: 0.85rem; /* Small font */
+    font-weight: 500; /* Medium weight */
+    transition: background 0.25s ease; /* Smooth background change */
+}
+
+/* Hover state for skill tag */
+.skill-tag:hover {
+    background: #dbeafe; /* Slightly darker blue */
+    color: #1e3a8a; /* Darker text */
+}
+
+/* Fade-in animation for elements */
+@keyframes smoothFadeUp {
+    0% { opacity: 0; transform: translateY(30px); } /* Start faded and shifted down */
+    100% { opacity: 1; transform: translateY(0); } /* End visible and in place */
+}
+
+/* Tablet responsive (max-width: 768px) */
+@media (max-width: 768px) {
+    .about-details {
+        padding: 40px 15px;
+    }
+
+    .about-details h2 {
+        font-size: clamp(1.5rem, 4vw, 1.9rem);
+    }
+
+    .about-text {
+        font-size: clamp(0.95rem, 2vw, 1.05rem);
+        padding: 0 12px;
+    }
+
+    .btn-primary {
+        min-height: 44px;
+        padding: 12px 20px;
+    }
+
+    .hire-option {
+        min-height: 44px;
+        padding: 12px 16px;
+    }
+}
+
+/* Responsive styles for smaller screens (max-width: 480px) */
+@media (max-width: 480px) {
+    .about-details {
+        padding: 40px 15px;
+        margin-top: 0;
+    }
+
+    .about-details h2 {
+        position: relative;
+        z-index: 1;
+        display: block;
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .btn-primary {
+        width: auto;
+        min-width: 140px;
+        max-width: 100%;
+        font-size: 0.95rem;
+        padding: 12px 18px;
+        min-height: 44px;
+    }
+
+    .hire-options {
+        width: 180px; /* Narrower dropdown */
+        left: 0; /* Align left */
+        transform: translateX(0) scale(0.95); /* No horizontal offset */
+    }
+
+    .hire-options.show {
+        transform: translateX(0) scale(1); /* Full size when shown */
+    }
+
+    .action-buttons {
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center; /* Center align */
+    }
+
+    .hire-wrapper {
+        width: 100%; /* Full width */
+        max-width: 140px; /* Constrain width */
+    }
+
+    .hire-option[data-tooltip]::after {
+        font-size: 0.75rem; /* Smaller tooltip font */
+        padding: 6px 10px; /* Compact padding */
+        max-width: 200px; /* Constrain width */
+        white-space: normal; /* Allow text wrapping */
+        text-align: center; /* Center text */
+    }
+}
+
+/* Responsive styles for larger screens (min-width: 768px) */
+@media (min-width: 768px) {
+    .about-details {
+        padding: 80px 20px; /* More padding */
+        border-radius: 0 0 20px 20px; /* Larger rounded corners */
+    }
+
+    .about-details h2 {
+        font-size: 2.2rem; /* Larger heading */
+    }
+
+    .about-text {
+        font-size: 1.05rem; /* Slightly larger text */
+    }
+
+    .action-buttons {
+        gap: 16px; /* Wider gap */
+        margin-bottom: 40px; /* More space below */
+    }
+
+    .btn-primary {
+        width: 170px; /* Slightly larger buttons */
+        min-width: 170px; /* Minimum width */
+    }
+
+    .hire-options {
+        width: 220px; /* Wider dropdown */
+    }
+
+    .skills {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* Multi-column grid */
+        gap: 25px; /* Larger gap */
+        margin-top: 40px; /* More top margin */
+    }
+
+    .skill-category h3 {
+        font-size: 1.2rem; /* Larger heading */
+    }
+}

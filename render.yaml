@@ -1,0 +1,34 @@
+services:
+  - type: web
+    name: portfolio-backend
+    runtime: python
+    plan: free
+    region: oregon
+    buildCommand: pip install -r requirements.txt
+    startCommand: cd backend && uvicorn main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      # ── Secrets: set values in Render dashboard, NOT here ──────────────────
+      - key: GROQ_API_KEY
+        sync: false
+      - key: RESEND_API_KEY
+        sync: false
+      - key: CONTACT_RECEIVER_EMAIL
+        sync: false
+      - key: ALLOWED_ORIGINS
+        sync: false
+      # ── Non-secret defaults (safe to commit) ───────────────────────────────
+      - key: APP_ENV
+        value: production
+      - key: DEBUG
+        value: "False"
+      - key: GROQ_MODEL_EN
+        value: meta-llama/llama-4-scout-17b-16e-instruct
+      - key: GROQ_MODEL_UR
+        value: meta-llama/llama-4-scout-17b-16e-instruct
+      - key: GROQ_MODEL_NAME
+        value: meta-llama/llama-4-scout-17b-16e-instruct
+      - key: RESEND_FROM_EMAIL
+        value: onboarding@resend.dev
+      - key: LOG_LEVEL
+        value: INFO

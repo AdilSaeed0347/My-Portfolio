@@ -1,0 +1,32 @@
+{
+  "name": "my-portfolio",
+  "version": "1.0.0",
+  "description": "A modern portfolio website with integrated RAG chatbot",
+  "main": "./pages/home.html",
+  "scripts": {
+    "start": "live-server . --port=3000 --host=localhost --open=pages/home.html",
+    "dev": "live-server . --port=3000 --host=localhost --open=pages/home.html",
+    "build": "node scripts/generate-env.js"
+  },
+  "keywords": [
+    "portfolio",
+    "chatbot",
+    "RAG",
+    "web-development",
+    "javascript",
+    "html",
+    "css"
+  ],
+  "author": "XAdilTeam",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "dependencies": {
+    "marked": "^16.2.1"
+  },
+  "resolutions": {
+    "braces": "^3.0.3",
+    "micromatch": "^4.0.8"
+  }
+}

@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - My Portfolio</title>
+    <!-- ADD THIS AS THE FIRST SCRIPT IN <head> -->
+    <script src="../env.js"></script>
+    <script src="../config.js"></script>
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/contact.css">
+    <link rel="stylesheet" href="../styles/chatbot.css">
+    <link rel="stylesheet" href="../styles/projects.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <nav class="navbar">
+            <div class="nav-container">
+                <h2 class="nav-logo">
+                    <img src="../documents/logo.png" alt="Logo" class="nav-logo-icon">
+                    <span class="nav-logo-text">XAdilTeam</span>
+                </h2>
+                <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html" class="active" aria-current="page">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="menu-overlay"></div>
+
+        <main class="main-content">
+            <section class="hero-section">
+                <div class="container">
+                    <h1>My Projects</h1>
+                    <p>Explore some of my work in machine learning, NLP, Computer vision, LLM and AI Agents.</p>
+                </div>
+            </section>
+
+            <section class="projects-section">
+                <div class="container">
+                    <!-- Filter Buttons -->
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-category="all">All</button>
+                        <button class="filter-btn" data-category="ml">Machine Learning</button>
+                        <button class="filter-btn" data-category="nlp">NLP</button>
+                        <button class="filter-btn" data-category="cv">Computer Vision</button>
+                        <button class="filter-btn" data-category="llm">LLM</button>
+                        <button class="filter-btn" data-category="ai-agents">AI Agents</button>
+                    </div>
+
+                    <!-- Project Cards -->
+                    <div class="gig-cards">
+                        <div class="project-card gig-card" data-category="ml">
+                            <div class="project-image">
+                                <img src="../documents/Model-Risk-in-RA.jpg" alt="Login Risk Model">
+                                <div class="overlay">
+                                    <span class="gig-price">$150</span>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3>Login_Risk_Model</h3>
+                                <p>A machine learning model to predict login risk based on user behavior using RandomForestClassifier.</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">Pandas</span>
+                                    <span class="tech-tag">Scikit-learn</span>
+                                    <span class="tech-tag">NumPy</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" class="btn-primary">Request Demo</a>
+                                    <a href="https://github.com/AdilSaeed0347/Login_Risk_Model" class="btn-secondary">GitHub</a>
+                                </div>
+                                <div class="more-info hidden">
+                                    <h4>Project Overview</h4>
+                                    <p>Analyzes login patterns to predict risks using RandomForestClassifier.</p>
+                                    <h4>Problem Solved</h4>
+                                    <p>Detects security threats from anomalous logins.</p>
+                                    <h4>How It Can Help Others</h4>
+                                    <p>Improves platform security and prevents unauthorized access.</p>
+                                </div>
+                                <div class="gig-footer">
+                                    <span class="gig-rating">⭐ 4.8</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card gig-card" data-category="nlp">
+                            <div class="project-image">
+                                <img src="../documents/sentiment-analysis.jpg" alt="Sentiment Analyzer">
+                                <div class="overlay">
+                                    <span class="gig-price">$200</span>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3>Sentiment_Analyzer</h3>
+                                <p>A responsive portfolio with integrated RAG chatbot, modern UI, and smooth animations.</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">Flask</span>
+                                    <span class="tech-tag">NumPy</span>
+                                    <span class="tech-tag">Scikit-learn</span>
+                                    <span class="tech-tag">Pandas</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" class="btn-primary">Request Demo</a>
+                                    <a href="https://github.com/AdilSaeed0347/Sentiment_Analyzer" class="btn-secondary">GitHub</a>
+                                </div>
+                                <div class="more-info hidden">
+                                    <h4>Project Overview</h4>
+                                    <p>Analyzes text sentiment using ML models in a Flask-based app.</p>
+                                    <h4>Problem Solved</h4>
+                                    <p>Automates sentiment detection for feedback and social media.</p>
+                                    <h4>How It Can Help Others</h4>
+                                    <p>Aids businesses in gaining insights from text data.</p>
+                                </div>
+                                <div class="gig-footer">
+                                    <span class="gig-rating">⭐ 4.9</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card gig-card" data-category="ml">
+                            <div class="project-image">
+                                <img src="../documents/Heart.jpeg" alt="Cardio Diagnosis">
+                                <div class="overlay">
+                                    <span class="gig-price">$180</span>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3>CardioDiagnosis-ML-Project</h3>
+                                <p>Heart disease prediction using ML models with focus on recall, ROC curves, and comparison.</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">Pandas</span>
+                                    <span class="tech-tag">NumPy</span>
+                                    <span class="tech-tag">Scikit-learn</span>
+                                    <span class="tech-tag">Matplotlib</span>
+                                    <span class="tech-tag">Seaborn</span>
+                                    <span class="tech-tag">ML models</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" class="btn-primary">Request Demo</a>
+                                    <a href="https://github.com/AdilSaeed0347/CardioDiagnosis-ML-Project" class="btn-secondary">GitHub</a>
+                                </div>
+                                <div class="more-info hidden">
+                                    <h4>Project Overview</h4>
+                                    <p>Predicts heart disease risk using various ML algorithms and performance metrics.</p>
+                                    <h4>Problem Solved</h4>
+                                    <p>Enables early detection of cardiovascular diseases.</p>
+                                    <h4>How It Can Help Others</h4>
+                                    <p>Assists healthcare professionals in proactive patient care.</p>
+                                </div>
+                                <div class="gig-footer">
+                                    <span class="gig-rating">⭐ 4.7</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card gig-card" data-category="llm">
+                            <div class="project-image">
+                                <img src="../documents/Chatbot.png" alt="Chatbot Assistant App">
+                                <div class="overlay">
+                                    <span class="gig-price">$220</span>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3>Chatbot_Assistant_App</h3>
+                                <p>An AI-powered chatbot application for customer support using natural language processing.</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">Langchain</span>
+                                    <span class="tech-tag">Vector Databases</span>
+                                    <span class="tech-tag">LLLama Model</span>
+                                    <span class="tech-tag">Vector Tools</span>
+                                    <span class="tech-tag">Streamlit</span>
+                                    <span class="tech-tag">Deployment</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" class="btn-primary">Request Demo</a>
+                                    <a href="https://github.com/AdilSaeed0347/GIKI_RAG_CHATBOT" class="btn-secondary">GitHub</a>
+                                </div>
+                                <div class="more-info hidden">
+                                    <h4>Project Overview</h4>
+                                    <p>Develops a responsive chatbot to handle customer queries with NLP techniques.</p>
+                                    <h4>Problem Solved</h4>
+                                    <p>Reduces manual support efforts by automating responses.</p>
+                                    <h4>How It Can Help Others</h4>
+                                    <p>Enhances customer service efficiency for businesses.</p>
+                                </div>
+                                <div class="gig-footer">
+                                    <span class="gig-rating">⭐ 4.6</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card gig-card" data-category="ai-agents">
+                            <div class="project-image">
+                                <img src="../documents/Q&A.png" alt="RAG Prospectus Q&A Chatbot">
+                                <div class="overlay">
+                                    <span class="gig-price">$250</span>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3>RAG_Prospectus_Q&A_Chatbot</h3>
+                                <p>A multilingual RAG chatbot (English/Urdu) with FAISS vector search and document parsing.</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">FAISS</span>
+                                    <span class="tech-tag">HuggingFace</span>
+                                    <span class="tech-tag">Streamlit</span>
+                                    <span class="tech-tag">OpenAI API</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" class="btn-primary">Request Demo</a>
+                                    <a href="https://github.com/AdilSaeed0347/GIKI_RAG_CHATBOT" class="btn-secondary">GitHub</a>
+                                </div>
+                                <div class="more-info hidden">
+                                    <h4>Project Overview</h4>
+                                    <p>Gradio interface with chat export functionality, developed during GIKI internship.</p>
+                                    <h4>Problem Solved</h4>
+                                    <p>Enables efficient retrieval of document-based answers.</p>
+                                    <h4>How It Can Help Others</h4>
+                                    <p>Supports multilingual customer support and document querying.</p>
+                                </div>
+                                <div class="gig-footer">
+                                    <span class="gig-rating">⭐ 4.8</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card gig-card" data-category="ai-agents">
+                            <div class="project-image">
+                                <img src="../documents/multi_agent.png" alt="Agentic System for Multi-Tool Orchestration">
+                                <div class="overlay">
+                                    <span class="gig-price">$300</span>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3>Agentic_System_Multi_Tool_Orchestration</h3>
+                                <p>An intelligent agent controller with dynamic tool orchestration for multi-step tasks.</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">LangChain</span>
+                                    <span class="tech-tag">LLM</span>
+                                    <span class="tech-tag">Streamlit</span>
+                                    <span class="tech-tag">Custom Tool Orchestrator</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" class="btn-primary">Request Demo</a>
+                                    <a href="#" class="btn-secondary">GitHub</a>
+                                </div>
+                                <div class="more-info hidden">
+                                    <h4>Project Overview</h4>
+                                    <p>Classifies user queries and delegates to four specialized tools for efficient task completion.</p>
+                                    <h4>Problem Solved</h4>
+                                    <p>Automates complex workflows with multiple tools.</p>
+                                    <h4>How It Can Help Others</h4>
+                                    <p>Enhances productivity in multi-tool environments.</p>
+                                </div>
+                                <div class="gig-footer">
+                                    <span class="gig-rating">⭐ 4.9</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card gig-card" data-category="cv">
+                            <div class="project-image">
+                                <img src="../documents/Face_Recognition.png" alt="Face Recognition Application">
+                                <div class="overlay">
+                                    <span class="gig-price">$200</span>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3>Face_Recognition_Application</h3>
+                                <p>Real-time face recognition pipeline using deep learning with 
+                                    CNN, embeddings, tracking, augmentation, and detection.</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">OpenCV</span>
+                                    <span class="tech-tag">Convolutional Neural Networks (CNN)</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" class="btn-primary">Request Demo</a>
+                                    <a href="https://github.com/AdilSaeed0347/YOLOv11-CustomFaceDetection" class="btn-secondary">GitHub</a>
+                                </div>
+                                <div class="more-info hidden">
+                                    <h4>Project Overview</h4>
+                                    <p>Improved accuracy through transfer learning and dataset expansion.</p>
+                                    <h4>Problem Solved</h4>
+                                    <p>Enables secure face-based identification.</p>
+                                    <h4>How It Can Help Others</h4>
+                                    <p>Supports security systems and access control.</p>
+                                </div>
+                                <div class="gig-footer">
+                                    <span class="gig-rating">⭐ 4.7</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card gig-card" data-category="cv">
+                            <div class="project-image">
+                                <img src="../documents/OCR.png" alt="OCR Text Recognition System">
+                                <div class="overlay">
+                                    <span class="gig-price">$180</span>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3>OCR_Text_Recognition_System</h3>
+                                <p>Advanced optical character recognition with text extraction and export functionality.</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">Tesseract OCR</span>
+                                    <span class="tech-tag">OpenCV</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" class="btn-primary">Request Demo</a>
+                                    <a href="https://github.com/AdilSaeed0347?tab=repositories" class="btn-secondary">GitHub</a>
+                                </div>
+                                <div class="more-info hidden">
+                                    <h4>Project Overview</h4>
+                                    <p>Supports PNG, JPEG, JPG, BMP, DOCX file formats with preprocessing pipeline.</p>
+                                    <h4>Problem Solved</h4>
+                                    <p>Automates text extraction from images and documents.</p>
+                                    <h4>How It Can Help Others</h4>
+                                    <p>Assists in digitizing paper records.</p>
+                                </div>
+                                <div class="gig-footer">
+                                    <span class="gig-rating">⭐ 4.6</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card gig-card" data-category="ml">
+                            <div class="project-image">
+                                <img src="../documents/Crop-Yield-Prediction-Using-Machine-Learning-And-Flask-Deployment.png" alt="Crop Yield Prediction Pipeline">
+                                <div class="overlay">
+                                    <span class="gig-price">$220</span>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3>Crop_Yield_Prediction_Pipeline</h3>
+                                <p>Agricultural yield forecasting using historical data with regression models.</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">Regression Models</span>
+                                    <span class="tech-tag">Machine Learning</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" class="btn-primary">Request Demo</a>
+                                    <a href="https://github.com/AdilSaeed0347/CropYield-Prediction-ML-Pipeline" class="btn-secondary">GitHub</a>
+                                </div>
+                                <div class="more-info hidden">
+                                    <h4>Project Overview</h4>
+                                    <p>Features engineering, hyperparameter tuning, and model optimization.</p>
+                                    <h4>Problem Solved</h4>
+                                    <p>Provides data-driven yield predictions.</p>
+                                    <h4>How It Can Help Others</h4>
+                                    <p>Supports farmers with decision-making.</p>
+                                </div>
+                                <div class="gig-footer">
+                                    <span class="gig-rating">⭐ 4.8</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card gig-card" data-category="ml">
+                            <div class="project-image">
+                                <img src="../documents/Student_Attendance_system.jpg" alt="Student Attendance Management System">
+                                <div class="overlay">
+                                    <span class="gig-price">$150</span>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3>Student_Attendance_Management_System</h3>
+                                <p>Complete attendance tracking and management system using database management.</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">MySQL</span>
+                                    <span class="tech-tag">Frontend Development</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" class="btn-primary">Request Demo</a>
+                                    <a href="#" class="btn-secondary">GitHub</a>
+                                </div>
+                                
+                                <div class="gig-footer">
+                                    <span class="gig-rating">⭐ 4.5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+     <!-- Closing page-wrapper -->
+
+     <!-- Chatbot -->
+    <!-- <div id="chatbot-container">
+        <div id="chatbot-button" class="chatbot-button">
+            <div class="robot-icon">
+                <div class="robot-head">
+                    <div class="robot-eyes"></div>
+                </div>
+                <div class="robot-body"></div>
+                <div class="robot-arm robot-arm-left"></div>
+                <div class="robot-arm robot-arm-right"></div>
+            </div>
+            <div class="chat-message">How can I help you?</div>
+        </div>
+        <div id="chat-window" class="chat-window hidden">
+            <div class="chat-header">
+                <h3>XAdilTeam</h3>
+                <button class="close-chat" >×</button>
+            </div>
+            <div class="chat-messages" id="chat-messages">
+                <div class="message bot-message">
+                    <div class="message-content">
+                        Hi! I'm your AI assistant. Ask me anything about projects, skills, or experience!
+                    </div>
+                    <div class="message-time">Just now</div>
+                </div>
+            </div>
+            <div class="chat-input-container">
+                <input type="text" id="chat-input" placeholder="Type your message..." autocomplete="off">
+                <button id="send-btn" class="send-btn">➤</button>
+            </div>
+        </div>
+    </div> -->
+</div>
+    <!-- Footer -->
+    <div id="footer-container"></div>
+<div>
+    <script src="../utils/navigation.js"></script>
+    <script src="../utils/common.js"></script>
+    <script src="../utils/chatbot.js"></script>
+    <script src="../utils/projects.js"></script>
+</body>
+</html>

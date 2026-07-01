@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - My Portfolio</title>
+        <!-- ADD THIS AS THE FIRST SCRIPT IN <head> -->
+    <script src="../env.js"></script>
+    <script src="../config.js"></script>
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/home.css">
+    <link rel="stylesheet" href="../styles/chatbot.css">  
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <h2 class="nav-logo">
+                    <img src="../documents/logo.png" alt="Logo" class="nav-logo-icon">
+                    <span class="nav-logo-text">XAdilTeam</span>
+                </h2>
+                <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="home.html" class="active" aria-current="page">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="menu-overlay"></div>
+
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container">
+                <!-- Text (Left) -->
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="text-animated">Hi, I'm <span class="highlight">Adil Saeed</span></h1>
+                        <h2 class="text-sub"><span id="dynamic-role"></span></h2>
+                        <p class="text-sub"><b>
+                            A passionate Software Engineering student at 
+                            <span style="color: #3ab4c7;">IM | Sciences</span> Peshawar,
+                            specializing in AI, ML, Deep Learning, NLP, Computer Vision, and LLMs.
+                        </b></p>
+                    </div>
+                </div>
+
+                <!-- Image (Right) -->
+                <div class="profile-container">
+                    <img src="../documents/adil saeed'.png" alt="Adil Saeed" class="profile-img">
+                </div>
+            </div>
+        </section>
+
+        <!-- Enhanced Achievements Section -->
+        <section class="achievements-section">
+            <div class="container">
+                <h2 class="section-title">Key Achievements & Certifications</h2>
+                <div class="achievements-grid">
+                    <!-- Articles and Research Section (Left) -->
+                    <div class="articles-section">
+                        <div class="articles-card">
+                            <div class="articles-header">
+                                <h3 class="articles-title">My Articles & Research</h3>
+                                
+                            </div>
+                            <div class="articles-content">
+                                <a class="dynamic-caption" id="dynamic-caption" href="#" target="_blank">
+                                       How Deepseek introduces Mixture of Experts system
+                                </a>
+
+                                <div class="articles-stats">
+                                    <span class="stat-item">
+                                        <span class="stat-number">1</span>
+                                        <span class="stat-label">Research Paper</span>
+                                    </span>
+                                    <span class="stat-item">
+                                        <span class="stat-number">3+</span>
+                                        <span class="stat-label">Articles</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="articles-glow"></div>
+                        </div>
+                    </div>
+
+                    <!-- Certificates Section (Right) -->
+                    <div class="certificates-section">
+                        <div class="certificate-card-wrapper">
+                            <a href="#" id="certificate-card" class="certificate-card" target="_blank" aria-label="View Certificate">
+                                <!-- Certificate Title at Top -->
+                                <h3 id="certificate-title" class="certificate-title">Machine Learning Specialization</h3>
+                                
+                                <!-- Certificate Body: Image Left, Details Right -->
+                                <div class="certificate-body">
+                                    <img id="certificate-img" src="../documents/placeholder-cert1.png" alt="Certification" class="certificate-img">
+                                    <div class="certificate-content">
+                                        <p id="certificate-desc" class="certificate-desc">Advanced coursework in ML algorithms, including supervised and unsupervised learning.</p>
+                                        <span id="certificate-issuer" class="certificate-issuer">Coursera (Andrew Ng) - [Your Date]</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="dropdown-icon" id="certificate-dropdown-toggle"></div>
+                            </a>
+                            <ul class="dropdown-menu" id="certificate-dropdown">
+                                <li data-index="0">Machine Learning Specialization</li>
+                                <li data-index="1">Deep Learning Certification</li>
+                                <li data-index="2">Advanced Learning Algorithms</li>
+                                <li data-index="3">AI Introduction</li>
+                                <li data-index="4">CS50 Course</li>
+                            </ul>
+                        </div>
+                    </div></li>
+                              
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Enhanced Chatbot Code -->
+        <div id="chatbot-container">
+            <div id="chatbot-button" class="chatbot-button">
+                <div id="chatbot-button" class="chatbot-button">
+  <!-- Professional SMS/Chat Icon -->
+  <svg xmlns="http://www.w3.org/2000/svg" 
+       viewBox="0 0 24 24" 
+       class="chatbot-icon">
+    <path d="M20 2H4c-1.1 0-2 .9-2 2v16l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z" />
+    <line x1="7" y1="9" x2="17" y2="9" stroke="white" stroke-width="2" stroke-linecap="round"/>
+    <line x1="7" y1="13" x2="13" y2="13" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  </svg>
+</div>
+
+                <!-- <div class="chat-message">✋ How can I help you?</div> -->
+            </div>
+
+            <!-- 👇 Runtime Welcome Popup -->
+           <div id="chatbot-welcome" class="welcome-popup hidden">
+             👋 Hi, I’m AdilChat, How can I help you.
+             </div>
+
+
+            <div id="chat-window" class="chat-window hidden">
+    <div class="chat-header">
+        <div class="header-info">
+            <h3>AdilChat</h3>
+            <span class="online-status">
+                <span class="status-dot"></span> Online
+            </span>
+        </div>
+        <div class="header-actions">
+            <button class="close-chat" id="close-chat" aria-label="Close chat">×</button>
+        </div>
+    </div>
+                <div class="chat-messages" id="chat-messages">
+                    <!-- Messages will be dynamically added here -->
+                </div>
+                <div class="chat-input-container">
+                    <input type="text" id="chat-input" placeholder="Type your message..." autocomplete="off" maxlength="500" aria-label="Type your message here">
+                    <button id="micBtn" class="mic-btn" title="Click to speak" aria-label="Use microphone">
+                        🎤
+                    </button>
+                    <button id="send-btn" class="send-btn" title="Send message" aria-label="Send message">➤</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Page wrapper-container closing tag -->
+    <div id="footer-container"></div>
+
+    <script src="../utils/navigation.js"></script>
+    <script src="../utils/chatbot.js"></script>
+    <script src="../utils/home.js"></script>
+    <script src="../utils/common.js"></script>
+</body>
+</html>

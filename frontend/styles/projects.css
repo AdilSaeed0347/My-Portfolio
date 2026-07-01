@@ -1,0 +1,599 @@
+/* Set main content to Times New Roman */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    color: #111;
+    margin: 0;
+    padding: 0;
+}
+
+/* Footer specifically in Arial */
+.footer, 
+.footer .footer-text {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px; /* optional: adjust size */
+    color: #c2bebe;     /* keep your footer text color */
+}
+
+/* Container base style */
+.container {
+    font-family: 'Times New Roman', Times, serif; /* Apply serif font for main content containers */
+    font-size: large; /* Slightly larger font size for readability */
+}
+
+/* ===============================
+   Projects Section
+================================== */
+.projects-section {
+    padding: 5px 20px; /* Maintain reduced top padding for spacing */
+    background: #f9fafb; /* Light gray background for section */
+    font-size: large; /* Text size in this section */
+    font-family: 'Times New Roman', Times, serif; /* Serif font for projects */
+}
+
+/* Container inside Projects Section */
+.projects-section .container {
+    display: block; /* Reset to block for custom grid-like behavior */
+    max-width: 1200px; /* Classic portfolio width */
+    margin: 0 auto; /* Center the container */
+}
+
+/* ===============================
+   Gig Cards Container
+================================== */
+.gig-cards {
+    display: grid; /* Changed from flex to grid for row control */
+    grid-template-columns: repeat(2, 1fr); /* Two columns of equal width */
+    gap: 20px; /* Space between cards */
+    justify-items: center; /* Center items in the grid */
+}
+
+/* ===============================
+   Gig Card (Project Card) - Enhanced with Smooth Watery Effects
+================================== */
+.gig-card {
+    width: 92%; /* Full width within grid cell */
+    background: #fff;
+    border: 2px solid #ccc; /* Classic border for old style */
+    padding: 10px; /* Inner padding for older look */
+    margin-bottom: 20px; /* Space between rows */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Smooth watery transition */
+    border-radius: 12px; /* Rounded edges for each gig card */
+    transform: translateY(0) scale(1); /* Initial state */
+    will-change: transform, box-shadow, border-radius; /* Optimize for animations */
+}
+
+.gig-card:hover {
+    border-color: #000; /* Darker border on hover */
+    transform: translateY(-3px) scale(1.02); /* Gentle lift and scale */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+    border-radius: 13px; /* Slight radius increase for watery effect */
+}
+
+/* ===============================
+   Project Image - Enhanced Zoom Effect
+================================== */
+.gig-card .project-image {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 8px; /* Rounded image container */
+}
+
+.gig-card .project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Smooth watery zoom */
+    will-change: transform; /* Optimize for transform animations */
+}
+
+.gig-card:hover .project-image img {
+    transform: scale(1.05); /* Slightly more zoom for better effect */
+}
+
+/* Overlay label on image */
+.gig-card .overlay {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background: #2563eb;
+    color: #fff;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 6px; /* Slightly more rounded */
+    font-size: 0.8em;
+    transition: all 0.3s ease; /* Smooth transition for overlay */
+}
+
+.gig-card:hover .overlay {
+    background: #1d4ed8; /* Darker on hover */
+    transform: scale(1.05); /* Slight scale on hover */
+}
+
+/* ===============================
+   Project Content
+================================== */
+.gig-card .project-content {
+    padding: 10px;
+}
+
+.gig-card .project-content h3 {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: #111;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.gig-card:hover .project-content h3 {
+    color: #2563eb; /* Color change on hover */
+}
+
+.gig-card .project-content p {
+    font-size: 0.85em;
+    color: #555;
+    margin-bottom: 12px;
+    line-height: 1.4; /* Better readability */
+}
+
+/* ===============================
+   Technologies Tags
+================================== */
+.gig-card .project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 12px;
+}
+
+.gig-card .tech-tag {
+    background: #f0f4ff;
+    color: #2563eb;
+    padding: 4px 10px;
+    border: 1px solid #ccc; /* Classic border for tags */
+    border-radius: 6px; /* Slightly more rounded */
+    font-size: 0.75em;
+    transition: all 0.3s ease; /* Smooth hover effect */
+}
+
+.gig-card .tech-tag:hover {
+    background: #e0e7ff;
+    transform: translateY(-1px); /* Subtle lift */
+}
+
+/* ===============================
+   Buttons (Live Demo & GitHub)
+================================== */
+.gig-card .project-links {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.gig-card .btn-tertiary {
+    background: #f0f4ff;
+    color: #2563eb;
+    padding: 6px 12px;
+    border: 1px solid #ccc; /* Classic button border */
+    border-radius: 6px; /* Slightly more rounded */
+    cursor: pointer;
+    font-size: 0.85em;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Smooth transition */
+    text-decoration: none;
+    display: inline-block;
+}
+
+.gig-card .btn-tertiary:hover {
+    background: #2563eb;
+    color: #fff;
+    transform: translateY(-1px); /* Subtle lift */
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3); /* Colored shadow */
+}
+
+/* ===============================
+   More Info Section
+================================== */
+.more-info {
+    padding: 12px;
+    background: #f0f4ff;
+    border-top: 1px solid #ccc; /* Classic divider */
+    border-radius: 0 0 8px 8px; /* Rounded bottom corners */
+}
+
+.more-info h4 {
+    font-size: 1em;
+    margin: 8px 0 4px;
+    color: #111;
+}
+
+.more-info p {
+    font-size: 0.8em;
+    color: #333;
+    line-height: 1.3;
+}
+
+/* ===============================
+   Footer inside card
+================================== */
+.gig-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8em;
+    font-weight: 600;
+    color: #444;
+    border-top: 1px solid #ccc;
+    padding-top: 8px;
+}
+
+/* ===============================
+   Hide Elements
+================================== */
+.hidden {
+    display: none;
+}
+
+/* ===============================
+   Hero Section
+================================== */
+.hero-section {
+    background: linear-gradient(135deg, #f8f8f9 0%, #e1dee5 100%);
+    color: rgb(10, 9, 9);
+    padding: 40px 0;
+    text-align: center;
+    max-height: 180px;
+    border-radius: 10px;
+}
+
+/* ===============================
+   Main Content & Animations
+================================== */
+.main-content {
+    margin-top: 70px; /* Keep for navbar offset */
+    min-height: calc(100vh - 70px);
+    opacity: 0;
+    animation: smoothFadeUp 1s ease-out forwards;
+    animation-delay: 0.2s;
+}
+
+.main-content > section {
+    opacity: 0;
+    animation: smoothFadeUp 1s ease-out forwards;
+}
+
+.main-content > section:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.main-content > section:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+/* ===============================
+   Keyframes
+================================== */
+@keyframes smoothFadeUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ===============================
+   Filter Buttons - Enhanced
+================================== */
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 5px 20px 30px; /* Maintain spacing */
+    flex-wrap: wrap;
+    color: #2563eb;
+}
+
+.filter-btn {
+    background: #e0e0e0;
+    color: #1758d8;
+    border: 1px solid #111010;
+    padding: 10px 16px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border-radius: 6px;
+    background-color: #cfdff7;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: #5886ea; /* Blue color from previous design */
+    color: #fff; /* White text on hover */
+    border-color: #2563eb; /* Matching blue border */
+    transform: translateY(-1px); /* Subtle lift */
+    box-shadow: 0 2px 8px rgba(88, 134, 234, 0.3); /* Colored shadow */
+}
+
+/* Hide Class for Filtered Cards */
+.gig-card.hide {
+    display: none;
+}
+
+/* ===============================
+   Enhanced Mobile Responsive Design
+================================== */
+
+/* Large Desktop (1200px and up) */
+@media (min-width: 1200px) {
+    .gig-cards {
+        grid-template-columns: repeat(3, 1fr); /* Three columns on large screens */
+        gap: 25px;
+    }
+    
+    .gig-card {
+        width: 95%;
+    }
+}
+
+/* Tablet & Medium Desktop (768px - 1024px) */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .gig-cards {
+        grid-template-columns: repeat(2, 1fr); /* Two columns */
+        gap: 20px;
+    }
+    
+    .projects-section {
+        padding: 5px 15px;
+    }
+    
+    .gig-card .project-image {
+        height: 140px;
+    }
+}
+
+/* Small Tablet (481px - 768px) */
+@media (max-width: 768px) and (min-width: 481px) {
+    .gig-card {
+        width: 100%; /* Full width on smaller tablets */
+        padding: 15px; /* Increased padding for touch */
+        margin-bottom: 15px;
+    }
+    
+    .gig-cards {
+        grid-template-columns: repeat(2, 1fr); /* Still two columns on small tablets */
+        gap: 15px; /* Reduced gap for mobile */
+    }
+    
+    .gig-card .project-image {
+        height: 130px; /* Adjusted image height */
+        border-radius: 6px;
+    }
+    
+    .gig-card .project-content h3 {
+        font-size: 1em; /* Smaller heading */
+    }
+    
+    .gig-card .project-content p {
+        font-size: 0.8em; /* Adjusted text size */
+        line-height: 1.3;
+    }
+    
+    .gig-card .btn-tertiary {
+        padding: 8px 12px; /* Better touch targets */
+        font-size: 0.85em;
+    }
+    
+    .filter-buttons {
+        gap: 12px; /* Adjusted gap */
+        margin: 5px 15px 25px;
+    }
+    
+    .filter-btn {
+        padding: 8px 14px;
+        font-size: 0.95em;
+    }
+    
+    .projects-section {
+        padding: 5px 15px;
+    }
+}
+
+/* Mobile (320px - 480px) */
+@media (max-width: 480px) {
+    .gig-cards {
+        grid-template-columns: 1fr; /* Single column on mobile */
+        gap: 15px;
+        padding: 0 10px;
+    }
+    
+    .gig-card {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 15px;
+        border-radius: 10px;
+    }
+    
+    .gig-card .project-image {
+        height: 120px; /* Smaller image on mobile */
+        border-radius: 6px;
+    }
+    
+    .gig-card .project-content {
+        padding: 8px;
+    }
+    
+    .gig-card .project-content h3 {
+        font-size: 0.95em;
+        margin-bottom: 8px;
+    }
+    
+    .gig-card .project-content p {
+        font-size: 0.75em;
+        line-height: 1.3;
+        margin-bottom: 10px;
+    }
+    
+    .gig-card .tech-tag {
+        font-size: 0.7em;
+        padding: 3px 8px;
+        border-radius: 4px;
+    }
+    
+    .gig-card .btn-tertiary {
+        padding: 8px 14px;
+        font-size: 0.8em;
+        border-radius: 5px;
+    }
+    
+    .gig-footer {
+        font-size: 0.75em;
+        padding-top: 6px;
+    }
+    
+    .filter-buttons {
+        gap: 10px;
+        margin: 5px 10px 20px;
+        justify-content: center;
+    }
+    
+    .filter-btn {
+        padding: 6px 12px;
+        font-size: 0.9em;
+        border-radius: 5px;
+    }
+    
+    .projects-section {
+        padding: 5px 10px;
+    }
+    
+    .overlay {
+        bottom: 6px;
+        right: 6px;
+        font-size: 0.7em;
+        padding: 3px 8px;
+    }
+}
+
+/* Extra Small Mobile (320px and below) */
+@media (max-width: 320px) {
+    .gig-card {
+        padding: 10px;
+        border-radius: 8px;
+    }
+    
+    .gig-card .project-image {
+        height: 100px;
+    }
+    
+    .gig-card .project-content h3 {
+        font-size: 0.9em;
+    }
+    
+    .gig-card .project-content p {
+        font-size: 0.7em;
+    }
+    
+    .gig-card .tech-tag {
+        font-size: 0.65em;
+        padding: 2px 6px;
+    }
+    
+    .gig-card .btn-tertiary {
+        padding: 6px 10px;
+        font-size: 0.75em;
+    }
+    
+    .filter-btn {
+        padding: 5px 10px;
+        font-size: 0.85em;
+    }
+}
+
+/* ===============================
+   Landscape Mobile Optimization
+================================== */
+@media (max-height: 500px) and (orientation: landscape) {
+    .gig-card .project-image {
+        height: 100px; /* Smaller images in landscape */
+    }
+    
+    .gig-card {
+        margin-bottom: 10px; /* Reduced margins */
+    }
+    
+    .projects-section {
+        padding: 5px 10px;
+    }
+}
+
+/* ===============================
+   Touch Device Optimizations
+================================== */
+@media (hover: none) and (pointer: coarse) {
+    /* Remove hover effects for touch devices */
+    .gig-card:hover {
+        transform: none;
+        border-color: #ccc;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 12px;
+    }
+    
+    .gig-card:hover .project-image img {
+        transform: scale(1);
+    }
+    
+    .gig-card:hover .project-content h3 {
+        color: #111;
+    }
+    
+    /* Add active states for better touch feedback */
+    .gig-card:active {
+        transform: scale(0.98);
+        transition: transform 0.1s ease;
+    }
+    
+    .gig-card .btn-tertiary:active {
+        transform: scale(0.95);
+    }
+    
+    .filter-btn:active {
+        transform: scale(0.95);
+    }
+}
+
+/* ===============================
+   High DPI Display Optimization
+================================== */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .gig-card {
+        border-width: 1px; /* Thinner borders on high DPI */
+    }
+    
+    .gig-card .tech-tag {
+        border-width: 0.5px;
+    }
+    
+    .gig-card .btn-tertiary {
+        border-width: 0.5px;
+    }
+}
+
+/* ===============================
+   Performance Optimizations
+================================== */
+* {
+    -webkit-tap-highlight-color: transparent; /* Remove tap highlight on mobile */
+}
+
+.gig-card,
+.gig-card .project-image img,
+.filter-btn,
+.btn-tertiary {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}

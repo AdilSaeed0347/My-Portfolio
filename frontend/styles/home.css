@@ -1,0 +1,784 @@
+/* ===============================
+   BASE STYLES - Fixed duplicated body rule
+================================== */
+body {
+    font-size: 16px;
+    color: #111;
+    margin: 0;
+    padding-top: 70px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* FIXED NAVBAR */
+.navbar {
+    height: 70px;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.page-wrapper {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* ===============================
+   HERO SECTION
+================================== */
+.hero-section {
+    padding: 8px 0 15px 0;
+    background: linear-gradient(135deg, rgba(247, 248, 249, 0.95) 0%, rgba(208, 184, 227, 0.95) 100%);
+    color: #302c2c;
+    position: static;
+    overflow: hidden;
+    z-index: 1;
+    border-radius: 8px;
+    margin-top: 0;
+}
+
+.hero-section .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* HERO CONTENT */
+.hero-content {
+    flex: 1;
+    text-align: left;
+    margin-top: 8px;
+}
+
+.hero-text {
+    position: relative;
+}
+
+.hero-text h1,
+.hero-text h2,
+.hero-text p {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1s ease-out forwards;
+}
+
+.hero-text h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 15px;
+    font-weight: 700;
+    animation-delay: 0.2s;
+}
+
+.hero-text h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: clamp(1.2rem, 3vw, 1.6rem);
+    margin: -20px 0 20px 0;
+    font-weight: 500;
+    height: 2.3rem;
+    position: relative;
+    overflow: hidden;
+    animation-delay: 0.5s;
+}
+
+.hero-text p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #444;
+    animation-delay: 0.8s;
+    margin-top: 30px;
+}
+
+/* DYNAMIC ROLE TYPING */
+#dynamic-role {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    font-weight: 600;
+    animation: colorTransition 5s linear infinite;
+    font-size: inherit;
+}
+
+/* PROFILE IMAGE */
+.profile-container {
+    flex-shrink: 0;
+    margin-left: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-img {
+    width: 190px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 10px 25px rgba(31, 30, 30, 0.25);
+    animation: floatImage 4s ease-in-out infinite;
+}
+
+/* ===============================
+   ACHIEVEMENTS SECTION
+================================== */
+.achievements-section {
+    padding: 10px 0 25px 0;
+    background-color: #f7f8f9;
+    text-align: center;
+}
+
+.section-title {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    margin-bottom: 40px;
+    color: #302c2c;
+    position: relative;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 4px;
+    background: #302c2c;
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+    align-items: stretch;
+}
+
+/* ===============================
+   SHARED CARD STYLES
+================================== */
+.articles-section, 
+.certificates-section {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.articles-card, 
+.certificate-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    border-radius: 16px;
+    padding: 24px 20px;
+    height: 180px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+
+.articles-card {
+    border: 1px solid rgba(58, 180, 199, 0.15);
+}
+
+.certificate-card {
+    border: 1px solid rgba(139, 92, 246, 0.15);
+}
+
+.articles-card:hover {
+    border-color: rgba(58, 180, 199, 0.6);
+    box-shadow: 0 8px 24px rgba(58, 180, 199, 0.12);
+}
+
+.certificate-card:hover {
+    border-color: rgba(139, 92, 246, 0.6);
+    box-shadow: 0 8px 24px rgba(139, 92, 246, 0.12);
+}
+
+/* ===============================
+   ARTICLES CARD
+================================== */
+.articles-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    flex-shrink: 0;
+}
+
+.articles-title {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #2d3748;
+    margin: 0;
+    letter-spacing: -0.025em;
+}
+
+.articles-icon {
+    font-size: 1.6rem;
+    animation: subtlePulse 3s ease-in-out infinite;
+}
+
+.articles-content {
+    text-align: left;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.dynamic-caption {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #4a5568;
+    margin-bottom: 0;
+    font-weight: 500;
+    position: relative;
+    padding-left: 16px;
+    flex: 1;
+    transition: all 1.2s cubic-bezier(0.4, 0.0, 0.2, 1);
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dynamic-caption::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, #3ab4c7, #2d9cdb);
+    border-radius: 2px;
+}
+
+/* ===============================
+   CERTIFICATES CARD
+================================== */
+.certificate-card-wrapper {
+    position: relative;
+    height: 100%;
+}
+
+.certificate-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #2d3748;
+    margin-bottom: 12px;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.3;
+    text-align: center;
+    border-bottom: 2px solid rgba(139, 92, 246, 0.2);
+    padding-bottom: 10px;
+    padding-right: 30px;
+    flex-shrink: 0;
+    letter-spacing: -0.025em;
+    transition: all 1.2s cubic-bezier(0.4, 0.0, 0.2, 1);
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.certificate-body {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    flex: 1;
+}
+
+.certificate-img {
+    width: 100px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 12px;
+    flex-shrink: 0;
+    border: 2px solid rgba(139, 92, 246, 0.1);
+    transition: all 1.2s cubic-bezier(0.4, 0.0, 0.2, 1);
+    opacity: 1;
+    transform: scale(1);
+}
+
+.certificate-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.certificate-desc {
+    font-size: 0.95rem;
+    color: #4a5568;
+    line-height: 1.4;
+    margin-bottom: 8px;
+    font-family: 'Times New Roman', Times, serif;
+    flex: 1;
+    font-weight: 400;
+    transition: all 1.2s cubic-bezier(0.4, 0.0, 0.2, 1);
+    opacity: 1;
+    transform: translateX(0) scale(1);
+}
+
+.certificate-issuer {
+    font-size: 0.85rem;
+    color: #718096;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: auto;
+    font-weight: 500;
+    transition: all 1.2s cubic-bezier(0.4, 0.0, 0.2, 1);
+    opacity: 1;
+    transform: translateX(0) scale(1);
+}
+
+/* ===============================
+   FADE ANIMATIONS
+================================== */
+.dynamic-caption.fade-out {
+    opacity: 0;
+    transform: translateY(-15px);
+    transition: all 1s cubic-bezier(0.4, 0.0, 0.6, 1);
+}
+
+.certificate-title.fade-out {
+    opacity: 0;
+    transform: translateY(-15px) scale(0.95);
+    transition: all 1s cubic-bezier(0.4, 0.0, 0.6, 1);
+}
+
+.certificate-img.fade-out {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all 1s cubic-bezier(0.4, 0.0, 0.6, 1);
+}
+
+.certificate-desc.fade-out,
+.certificate-issuer.fade-out {
+    opacity: 0;
+    transform: translateX(20px) scale(0.95);
+    transition: all 1s cubic-bezier(0.4, 0.0, 0.6, 1);
+}
+
+.dynamic-caption.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 1.4s cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.certificate-title.fade-in {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    transition: all 1.4s cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.certificate-img.fade-in {
+    opacity: 1;
+    transform: scale(1);
+    transition: all 1.4s cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.certificate-desc.fade-in,
+.certificate-issuer.fade-in {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    transition: all 1.4s cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+/* ===============================
+   DROPDOWN
+================================== */
+.dropdown-icon {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    font-size: 1.2rem;
+    color: #a0aec0;
+    cursor: pointer;
+    padding: 4px;
+    background-color: transparent;
+    border: none;
+    opacity: 0.7;
+    font-weight: 500;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.dropdown-icon::before {
+    content: "▼";
+    font-size: 0.9rem;
+    color: inherit;
+}
+
+.dropdown-icon:hover {
+    opacity: 1;
+    color: #8b5cf6;
+    transform: translateY(-1px);
+}
+
+.dropdown-menu.active ~ .dropdown-icon,
+.dropdown-icon.active {
+    color: #8b5cf6;
+    opacity: 1;
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 14px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 6px 0;
+    z-index: 15;
+    min-width: 180px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.dropdown-menu.active {
+    display: block;
+    animation: professionalSlideIn 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.dropdown-menu li {
+    padding: 10px 16px;
+    font-size: 0.85rem;
+    color: #4a5568;
+    cursor: pointer;
+    font-family: 'Times New Roman', Times, serif;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+    transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    font-weight: 500;
+}
+
+.dropdown-menu li:last-child {
+    border-bottom: none;
+}
+
+.dropdown-menu li:hover {
+    background: linear-gradient(90deg, rgba(139, 92, 246, 0.08), rgba(139, 92, 246, 0.04));
+    color: #8b5cf6;
+    transform: translateX(4px);
+}
+
+/* ===============================
+   MIC BUTTON - Clean Design Without Wave Effect
+================================== */
+.mic-btn {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: #333;
+    transition: all 0.2s ease;
+    box-shadow: none;
+}
+
+/* Hover state - light gray background */
+.mic-btn:hover {
+    background: #e0e0e0;
+}
+
+/* Recording state - simple visual change without wave animation */
+.mic-btn.recording {
+    background: #f0f0f0;
+    color: #d32f2f; /* Red color to indicate recording */
+    transform: scale(1.1); /* Slightly larger when recording */
+    box-shadow: 0 2px 8px rgba(211, 47, 47, 0.2); /* Subtle red shadow */
+}
+
+/* Remove any wave animation - no ::after pseudo-element */
+
+/* Mobile responsive */
+@media (max-width: 480px) {
+    .mic-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 360px) {
+    .mic-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 15px;
+    }
+}
+
+/* ===============================
+   ANIMATIONS
+================================== */
+@keyframes floatImage {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+@keyframes fadeUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes colorTransition {
+    0%, 100% { color: #3ab4c7; }
+    50% { color: #8b5cf6; }
+}
+
+@keyframes subtlePulse {
+    0%, 100% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.05); opacity: 1; }
+}
+
+@keyframes professionalSlideIn {
+    from { opacity: 0; transform: translateY(-12px) scale(0.95); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes wave {
+    0% { transform: scale(0.5); opacity: 0.6; }
+    100% { transform: scale(1); opacity: 0; }
+}
+
+/* ===============================
+   MOBILE RESPONSIVE
+================================== */
+@media (max-width: 768px) {
+    body {
+        padding-top: 60px;
+    }
+    
+    .navbar {
+        height: 60px;
+    }
+    
+    .hero-section {
+        padding: 20px 0;
+        margin-top: 5px;
+    }
+
+    .hero-section .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .hero-content {
+        margin-top: 10px;
+    }
+
+    .profile-container {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .profile-img {
+        width: 140px;
+        height: 140px;
+    }
+
+    .hero-text h1 {
+        font-size: clamp(1.8rem, 5vw, 2.5rem);
+    }
+
+    .hero-text h2 {
+        font-size: clamp(1.1rem, 3vw, 1.4rem);
+        height: 1.8rem;
+        margin-top: -15px;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-top: 20px;
+    }
+
+    .achievements-section {
+        padding: 20px 0;
+    }
+
+    .section-title {
+        font-size: clamp(1.8rem, 5vw, 2.2rem);
+        margin-bottom: 30px;
+    }
+
+    .achievements-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        max-width: 100%;
+    }
+
+    .articles-card,
+    .certificate-card {
+        padding: 20px;
+        height: auto;
+        min-height: 200px;
+    }
+
+    .certificate-body {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .certificate-img {
+        width: 100%;
+        max-width: 200px;
+        height: 120px;
+    }
+
+    .certificate-content {
+        width: 100%;
+    }
+
+    .dropdown-icon {
+        top: 12px;
+        right: 12px;
+    }
+
+    .dropdown-menu {
+        right: 12px;
+        top: 45px;
+        min-width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding-top: 55px;
+    }
+    
+    .navbar {
+        height: 55px;
+    }
+    
+    .hero-section {
+        padding: 15px 0;
+    }
+
+    .hero-text h1 {
+        font-size: clamp(1.5rem, 4vw, 2rem);
+    }
+
+    .hero-text h2 {
+        font-size: clamp(1rem, 2.5vw, 1.2rem);
+        height: 1.5rem;
+    }
+
+    .hero-text p {
+        font-size: 0.9rem;
+        margin-top: 15px;
+    }
+
+    .profile-img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .achievements-section {
+        padding: 15px 0;
+    }
+
+    .section-title {
+        font-size: clamp(1.5rem, 4vw, 1.8rem);
+        margin-bottom: 25px;
+    }
+
+    .articles-card,
+    .certificate-card {
+        padding: 16px;
+        min-height: 180px;
+    }
+
+    .articles-title {
+        font-size: 1.15rem;
+    }
+
+    .certificate-title {
+        font-size: 1.05rem;
+        padding-right: 25px;
+    }
+
+    .certificate-desc {
+        font-size: 0.9rem;
+    }
+
+    .certificate-issuer {
+        font-size: 0.8rem;
+    }
+
+    .certificate-img {
+        height: 100px;
+    }
+
+    .dropdown-menu {
+        right: 8px;
+        top: 40px;
+        min-width: 180px;
+    }
+
+    .mic-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+
+    .mic-btn.recording::after {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 360px) {
+    .container {
+        width: 95%;
+        padding: 0 10px;
+    }
+    
+    .hero-text h1 {
+        font-size: clamp(1.3rem, 3.5vw, 1.8rem);
+    }
+    
+    .hero-text h2 {
+        font-size: clamp(0.9rem, 2vw, 1.1rem);
+        height: 1.3rem;
+    }
+    
+    .profile-img {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .articles-card,
+    .certificate-card {
+        padding: 12px;
+    }
+    
+    .dropdown-menu {
+        min-width: 160px;
+        right: 5px;
+    }
+}

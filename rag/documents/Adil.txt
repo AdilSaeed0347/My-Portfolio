@@ -1,0 +1,369 @@
+# Adil Saeed - Professional Portfolio
+# Last Updated: December 22, 2025
+
+## **About AdilChat - AI Assistant**
+**Assistant Name:** AdilChat  
+**Identity and Purpose:** AdilChat is an intelligent AI assistant developed by Adil Saeed to help people learn about his professional background, skills, projects, and career journey. AdilChat serves as an interactive guide to Adil's portfolio, answering questions about his education, technical expertise, work experience, and professional achievements.  
+
+**Creator Information:**  
+- **Developer:** Adil Saeed  
+- **Purpose:** Created to provide instant, accurate information about Adil Saeed's professional profile  
+- **Integration:** Embedded within Adil Saeed's professional portfolio website  
+
+**What AdilChat Can Help With:**  
+- Information about Adil's education and academic achievements  
+- Details about AI/ML projects and technical implementations  
+- Professional experience, internships, and leadership roles  
+- Technical skills, certifications, and training programs  
+- Contact information and networking opportunities  
+- Research interests and career aspirations  
+- Project repositories and code samples  
+- Conference participation and community involvement  
+
+**AdilChat's Communication Style:** AdilChat communicates professionally yet conversationally, providing detailed and accurate information based on Adil Saeed's comprehensive portfolio data. The assistant is designed to help recruiters, collaborators, students, and professionals understand Adil's capabilities and connect with him for opportunities.  
+
+**Technical Foundation:** AdilChat is powered by advanced RAG (Retrieval-Augmented Generation) technology, utilizing vector embeddings and semantic search to retrieve the most relevant information from Adil's portfolio database. This ensures accurate, context-aware responses to user queries.  
+
+**Primary Function Examples:**  
+- "What is your name?" → "I am AdilChat, an AI assistant created by Adil Saeed."  
+- "Who created you?" → "I was developed by Adil Saeed to help people learn about his professional background and expertise."  
+- "What can you help me with?" → "I can provide information about Adil's education, projects, skills, experience, and how to contact him for collaborations."  
+
+**Availability:** AdilChat is available 24/7 through Adil Saeed's portfolio website, ready to assist anyone interested in learning more about his work, connecting for opportunities, or exploring potential collaborations.
+
+## **Professional Summary**
+Adil Saeed is a dedicated Software Engineering undergraduate at IMSciences, Peshawar, with a 3.6 GPA and a strong focus on Artificial Intelligence and Machine Learning. He has completed advanced training including the GIKI Full Stack AI Bootcamp, multiple DeepLearning.AI courses by Andrew Ng, and hands-on RAG-based project development. Adil is an active AI community leader, conference ambassador, and aspiring researcher passionate about building ethical, impactful AI solutions for low-resource languages and real-world challenges in Pakistan.
+
+## **Introduction**
+Adil Saeed is a Software Engineering student at the Institute of Management Sciences (IMSciences), Peshawar. He specializes in Artificial Intelligence, Machine Learning, Deep Learning, Natural Language Processing (NLP), Computer Vision, and Large Language Models (LLMs). His mission is building innovative AI solutions for real-world problems.
+
+Adil enhanced his expertise through the GIKI ML → LLM Bootcamp 2025, gaining exposure to advanced AI architectures and research methodologies. He visited SkyElectric to observe AI-powered energy systems, GPU-based computation, and commercial AI applications.
+
+His research interests include ML/DL model optimization, Computer Vision for machine perception, NLP/LLMs for low-resource languages (Urdu, Pashto), and impactful AI/ML project development. Adil aims to pursue an MS in AI/ML research and contribute to the global AI community.
+
+## **Education**
+**Bachelor of Applied Science (BASc) - Computer Software Engineering**  
+- Institution: Institute of Management Sciences (IMSciences), Peshawar  
+- Description: The Institute of Management Sciences (IMSciences), based in Peshawar is a premier public sector business school of the country. The Institute imparts high quality education and training in the fields of management, information technology and allied disciplines.  
+- Duration: September 2023 – September 2027  
+- GPA: 3.67
+- Achievements: Alhamdulillah, selected for the Prime Minister's Laptop Scheme in the first merit list and also recived the laptop already.
+- Grade: A  
+- Specializations: Web Development, Machine Learning, Software Architecture, UI/UX Design, System Design, Database Management  
+- Core Skills: Software Development, Data Analysis, Java, Python, Requirements Engineering, MySQL  
+
+**Diploma in Information Technology (DIT)**  
+- Institution: Mandani Institute of Technology and Sciences  
+- Duration: February 2022 – March 2023  
+- Grade: A  
+- Focus: Programming, Databases, Web Development, Operating Systems  
+- Skills: Microsoft Office, Computer Systems, Programming, Networking  
+
+**Higher Secondary School Certificate (HSSC) - Pre-Medical**  
+- Institution: Islamia College Peshawar  
+- Duration: March 2020 – April 2022  
+- Grade: A  
+- Subjects: Biology, Chemistry, Physics  
+- Skills: Data Interpretation, Human Anatomy, Scientific Reasoning  
+
+**Secondary School Certificate (SSC) - Pre-Medical**  
+- Institution: New Islamia School and College, Charsadda  
+- Duration: September 2018 – September 2020  
+- Grade: A  
+- Skills: Analytical Skills, Research Skills, Scientific Methods, Documentation  
+
+**Additional Educational Platforms**  
+- Panaversity: A platform for Pakistani students offering professional AI-driven technologies. Key figure: Zia Khan, an agentic engineer in Pakistan running Panaversity. Focused on advanced AI learning and practical skills development.  
+
+## **Professional Training**
+**GIKI ML → LLM Bootcamp 2025**  
+- Advanced Machine Learning and Supervised Learning  
+- Deep Learning and Artificial Neural Networks  
+- Convolutional Neural Networks (CNN) and Recurrent Neural Networks (RNN)  
+- Computer Vision and Natural Language Processing  
+- Large Language Models (LLMs) and LLMOps  
+- MLOps and Production AI Systems  
+
+## **Technical Skills**
+**Programming Languages:** Python, Java, JavaScript, HTML, CSS, SQL, MySQL  
+**AI/ML Technologies:** Machine Learning, Deep Learning, Neural Networks, Computer Vision, Natural Language Processing, Large Language Models, Scikit-learn, TensorFlow, PyTorch  
+**Development Tools:** Git/GitHub, Jupyter Notebook, VS Code, OpenCV, FAISS, HuggingFace, Gradio  
+**Web Development:** Frontend (HTML, CSS, JavaScript), Backend Development, UI/UX Design, Database Management  
+**Software Engineering:** Software Architecture, System Design, Requirements Engineering, Agile Development  
+**Cloud Platforms:** Google Cloud Platform (Fundamentals)  
+
+## **Projects Portfolio**
+**GIKI Prospectus Q&A Chatbot**  
+- Technologies: Python, FAISS, HuggingFace, Gradio, OpenAI API  
+- Features: Multilingual RAG chatbot (English/Urdu), FAISS vector search, document parsing, embeddings, efficient retrieval  
+- Implementation: Gradio interface with chat export functionality  
+- Context: Developed during GIKI internship  
+
+**Sentiment Analysis System**  
+- Technologies: Python, Scikit-learn, NLP, TF-IDF, Logistic Regression  
+- Achievement: 85% precision in sentiment classification  
+- Enhancement: Improved robustness using advanced embeddings  
+- Application: Text sentiment classification and analysis  
+
+**Face Recognition Application**  
+- Technologies: Python, OpenCV, Convolutional Neural Networks (CNN)  
+- Implementation: Real-time face recognition pipeline with deep learning  
+- Enhancement: Improved accuracy through transfer learning and dataset expansion  
+- Performance: High accuracy facial detection and recognition system  
+
+**CardioDiagnosis - Heart Disease Prediction**  
+- Technologies: Python, Random Forest, Support Vector Machine (SVM)  
+- Achievement: 90% recall for cardiovascular risk assessment  
+- Validation: ROC curves and cross-validation for model evaluation  
+- Application: Medical diagnostic support system  
+
+**Login Risk Detection Model**  
+- Technologies: Python, RandomForestClassifier, Anomaly Detection  
+- Purpose: Security system for detecting suspicious login patterns  
+- Features: Advanced feature engineering for high-risk behavior detection  
+- Implementation: Real-time anomaly detection for user authentication  
+
+**OCR Text Recognition System**  
+- Technologies: Python, Tesseract OCR, OpenCV  
+- Support: PNG, JPEG, JPG, BMP, DOCX file formats  
+- Features: Text extraction, direct copy/export functionality, preprocessing pipeline  
+- Recognition: Advanced optical character recognition with high accuracy  
+
+**Crop Yield Prediction Pipeline**  
+- Technologies: Python, Regression Models, Machine Learning  
+- Purpose: Agricultural yield forecasting using historical data  
+- Process: Feature engineering, hyperparameter tuning, model optimization  
+- Application: Data-driven agricultural decision support  
+
+**Student Attendance Management System**  
+- Technologies: MySQL, Frontend Development  
+- Purpose: Database management practice project  
+- Features: Complete attendance tracking and management system  
+
+## **Professional Experience**
+**Ambassador – Institute of Emerging Careers | Digital Architect Conference (2025)**  
+- Representation: Represented IMSciences at a six-day international Digital Architect Conference, engaging with global speakers and industry experts across 20+ sessions  
+- Moderation: Moderated diverse sessions on AI, digital transformation, and emerging technologies, gaining exposure to global industry perspectives  
+- Collaboration: Supported event coordination and participant engagement to enhance learning outcomes and knowledge exchange  
+- Recognition: Awarded a verified certificate by IEC for contributions as an Ambassador, with mentorship and guidance from Sir Ommer and Ms. Maryam during moderation  
+
+**AI/ML Lead - Microsoft Learn Student Ambassadors (2024 - Present)**  
+- Leadership: Technical workshops on ML, DL, and NLP for 50+ students  
+- Mentorship: Guided peers in scalable ML applications with focus on ethical AI  
+- Organization: AI bootcamps bridging academia and industry  
+- Impact: Community building through AI/ML education and training  
+
+**Project Intern - GIKI, Topi (Summer 2025)**  
+- Development: RAG Chatbot for prospectus queries and information retrieval  
+- Collaboration: Applied ML projects in NLP and vector search technologies  
+- Training: Workshop assistance to enhance practical AI skills  
+- Research: Hands-on experience with cutting-edge AI applications  
+
+**Technical Team Member - MLSA Peshawar (May 2025 - Present)**  
+- Contribution: Community engagement and technical collaboration  
+- Focus: AI/ML knowledge sharing and skill development  
+- Activities: Technical workshops and community impact initiatives  
+
+**Member – Green Youth Movement (Government of Pakistan)**  
+Adil Saeed is an active member of the Green Youth Movement scheme initiated by the Government of Pakistan under the leadership of Prime Minister Shehbaz Sharif. He contributes to youth-led environmental awareness and sustainability efforts, focusing on climate action, green innovation, and national development through youth participation.  
+
+**Participant – Pakistan Youth Leadership Initiative (PYLI) | Onsite Training (2025)**  
+Adil Saeed completed a four-day onsite leadership and civic engagement training program organized by the Pakistan Youth Leadership Initiative. He participated in practical tasks promoting the Clean and Green Pakistan initiative and collaborated with youth leaders to propose sustainable solutions. As part of the program, he presented an environmental solution in the form of a three-dimensional model focused on cleanliness, sustainability, and community impact.  
+
+**Extracurricular Initiatives**  
+- Currently working to establish an organization/community at IMSciences for developers focused on development projects. This initiative will demonstrate progress over semesters to Director Usman Ghani.  
+- Involved in collaborations with diverse professionals, awarded distinguished roles in various projects and events.  
+- Emphasis on focus: Focus means saying no to many things to say yes to a few, enabling exceptional achievements in selected areas.  
+
+## **Certifications and Awards**
+**Full Stack AI Bootcamp Completion**  
+- Issuer: Ghulam Ishaq Khan Institute of Engineering Sciences and Technology (GIKI)  
+- Issued: July 2025  
+- Skills: Machine Learning · Deep Learning · Computer Vision · Natural Language Processing (NLP) · Large Language Models (LLM) · MLOps  
+- Description: A 4-week advanced AI full-stack bootcamp covering abstract-level concepts, industry visits, and hands-on project development.  
+
+**Digital Architect Conference – Ambassador Certificate**  
+- Issuer: Institute of Emerging Careers (IEC)  
+- Issued: November 2025  
+- Skills: Collaborative Leadership · Stakeholder Engagement · Professional Networking · Cross-Cultural Communication · Diversity & Inclusion Awareness · Community Engagement  
+- Recognition: Served as Ambassador and session moderator at international conference.  
+
+**Publishing Excellence**  
+- Issuer: Emerald Publishing  
+- Issued: November 2025  
+- Skills: Academic Publishing · Scholarly Communication · Research Integrity  
+
+**Introduction to Google Cloud Platform**  
+- Issuer: SimpleLearn  
+- Issued: October 2025  
+- Credential ID: 9081325  
+- Skills: Cloud Computing Fundamentals · Google Cloud Platform (GCP) Overview · Identity and Access Management (IAM)  
+
+**Supervised Machine Learning: Regression and Classification**  
+- Issuer: DeepLearning.AI (Coursera) – Andrew Ng  
+- Issued: September 2025  
+- Credential ID: https://coursera.org/verify/4G51KHOUXCN0  
+- Skills: Machine Learning · Regression Models · Classification  
+
+**Advanced Learning Algorithms**  
+- Issuer: DeepLearning.AI (Coursera) – Andrew Ng  
+- Issued: September 2025  
+- Credential ID: https://coursera.org/verify/3T2RBSQIGXW2  
+- Skills: Artificial Neural Networks · Regularization Techniques · Optimization in ML  
+
+**Unsupervised Learning, Recommenders, Reinforcement Learning**  
+- Issuer: DeepLearning.AI (Coursera) – Andrew Ng  
+- Issued: September 2025  
+- Credential ID: https://coursera.org/verify/PIY6AYK094M2  
+- Skills: Deep Learning · Convolutional Neural Networks (CNN) · Sequence Models  
+
+**Permit to Work (PTW) – Certified Training**  
+- Issuer: PAK Safety Solutions  
+- Issued: October 2025  
+- Skills: Permit to Work System · Risk Assessment · Health & Safety  
+- Description: Certified training on safe work authorization and control of high-risk tasks.  
+
+**ISO 45001:2018 OHSMS**  
+- Issuer: PAK Safety Solutions  
+- Issued: August 2025  
+- Skills: Occupational Health and Safety Management Systems  
+
+**Additional Awards**  
+- Verified Certificate from Institute of Emerging Careers (IEC) for Ambassador role at Digital Architect Conference (2025).  
+- Participation Certificate from Pakistan Youth Leadership Initiative (PYLI) for onsite training (2025).  
+- Distinguished roles in collaborations with professionals across AI and tech events.  
+- Selection in Prime Minister's Laptop Scheme (First Merit List).  
+
+## **Contact Information**
+**Primary Contact**  
+- Email: adilsaeed047@gmail.com (Preferred for professional inquiries)  
+
+**Professional Networks**  
+- LinkedIn: https://www.linkedin.com/in/adil-saeed-9b7b51363/ Professional networking and career updates  
+- GitHub: https://github.com/AdilSaeed0347 (Code repositories and projects)  
+
+**Social Media**  
+- Facebook: https://www.facebook.com/adil.saeed.9406 (Social connection)  
+- Medium: https://medium.com/@adilahmad0347  
+-Twitter: https://x.com/AdilSaeed1058?t=vM9Sc7hCDQN3Mdzq0N_EUQ&s=09
+-X acount :https://x.com/AdilSaeed1058?t=vM9Sc7hCDQN3Mdzq0N_EUQ&s=09
+
+**Project Links**  
+- OCR Project: https://github.com/AdilSaeed0347/OCR_project  
+- Login Risk Model: https://github.com/AdilSaeed0347/Login_Risk_Model  
+
+**Professional Website**  
+- Portfolio: About - Adil Saeed | AI Engineer  
+- Schedule Call: Available for professional consultations  
+
+## **Personal Background and Motivation**
+**Family Support System**  
+Adil's elder brother, Asad Ali (age 29), serves as his primary mentor and inspiration. Asad Ali completed his Bachelor of Science in Software Engineering from an international university and has professional experience at La Shifa International (Islamabad) and Air University as a Controller. Asad Ali's guidance and encouragement were instrumental in Adil's participation in the GIKI bootcamp and his academic achievements.  
+
+**Mentorship and Inspiration**  
+The primary inspiration behind Adil's AI journey comes from Sir Ali Imran Sindhu, a respected teacher at GIKI. Sir Ali Imran has:  
+- Organized bootcamps and training sessions for students  
+- Worked extensively to create growth opportunities at GIKI  
+- Invited renowned experts in LLMs, Agentic AI, and modern technologies  
+- Provided industry-oriented guidance and motivation  
+- Created a culture of learning and innovation at the university  
+Adil credits Sir Ali Imran Sindhu as the foundational inspiration for his AI projects and portfolio development.  
+
+Adil is inspired by the quote: "Be the best of whatever you are." This means pursuing your passion in a way that no one can match, loving what you do—that is the success behind Steve Jobs' story. Consistency is key, as seen in Sam Altman's journey: He developed Loopt in 2005, struggled continuously for 5-6 years without giving up, and eventually sold it for over 40 million to a company. That capital helped him invest and build OpenAI, now a competitor to Google and Facebook. Another guiding principle: "Your time is limited, don't waste it living someone else's life. Don't be trapped by dogma, which is living with the results of other people's thinking. What will people say? It doesn't matter when you are doing the right things. Don't be in dogma."  
+
+**Friends and Peer Network**  
+Adil maintains strong connections with fellow students from Islamia College Peshawar:  
+**Medical Students:**  
+- Hasnain: MBBS student in Northwest Pakistan, Peshawar resident  
+- Saad Khan: MBBS at Bacha Khan Medical College (BKMC), Mardan. Lives in Regi Model Town, Peshawar (near Board Bazar)  
+- Rohail: MBBS at Saidu Medical College (SMC), Swat. Resident of Shabqadar  
+- Umer Khan: MBBS at Peshawar Medical College (PMC), Peshawar. Also from Shabqadar  
+**Law Student:**  
+- Daud Khan: Law student at University of the Punjab (PU), Lahore. Resident of Katlang, Mardan District  
+All friends completed their FSc (Intermediate) in Pre-Medical from Islamia College Peshawar, creating a strong educational foundation and lasting friendships.  
+
+## **Career Vision and Goals**
+**Immediate Goals**  
+- Complete Bachelor's in Software Engineering with excellence  
+- Pursue advanced research in AI/ML through MS program  
+- Contribute to AI solutions for real-world problems  
+- Currently involved in learning cutting-edge AI technologies to master them for personal and professional growth  
+
+**Research Interests**  
+- Low-resource language processing (Urdu, Pashto)  
+- Healthcare AI applications and medical diagnostics  
+- Energy sector AI solutions and optimization  
+- Ethical AI development and responsible innovation  
+
+**Long-term Vision**  
+- Establish expertise in AI/ML research and development  
+- Contribute to Pakistan's technology ecosystem advancement  
+- Build bridges between academic research and industry applications  
+- Develop AI solutions addressing local and global challenges  
+
+**Professional Aspirations**  
+- Become a leading AI/ML researcher and practitioner  
+- Mentor next generation of AI developers  
+- Contribute to international AI research community  
+- Apply AI for social good and sustainable development  
+
+## **Hobbies and Interests**
+**Technical Interests**  
+- Exploring cutting-edge AI research papers and implementations  
+- Experimenting with new ML/DL frameworks and architectures  
+- Contributing to open-source AI projects and communities  
+- Staying updated with latest developments in LLMs and Computer Vision  
+
+**Learning Activities**  
+- Participating in bootcamps, workshops, and technical seminars  
+- Reading technical blogs and research publications  
+- Practicing programming and algorithm optimization  
+- Building personal projects to explore new technologies  
+
+**Community Engagement**  
+- Organizing and participating in AI/ML study groups  
+- Sharing knowledge through technical presentations  
+- Mentoring junior students in programming and AI concepts  
+- Contributing to technology communities and forums  
+
+## **Soft Skills**
+- Leadership and Team Collaboration: Demonstrated through roles as AI/ML Lead and Ambassador in various organizations.  
+- Communication: Effective in moderating sessions, presenting projects, and mentoring peers.  
+- Problem-Solving: Applied in developing AI solutions for real-world challenges like healthcare diagnostics and agricultural predictions.  
+- Adaptability: Quick learner in diverse technologies from bootcamps and internships.  
+- Time Management: Balanced academic pursuits with professional training, projects, and community involvement.  
+
+## **Languages**
+- English: Fluent (Professional and Academic)  
+- Urdu: Native  
+- Pashto: Proficient (Focus on low-resource language processing)  
+
+## **Professional Availability**
+Open to internships, freelance AI/ML projects, research collaborations, open-source contributions, and junior AI engineer roles (remote or onsite). Particularly interested in RAG systems, LLM fine-tuning, low-resource NLP, and healthcare/energy AI applications.
+
+## **References**
+Available upon request. Key references include:  
+- Sir Ali Imran Sindhu (GIKI Mentor)  
+- Asad Ali (Brother and Professional Mentor)  
+- Director Usman Ghani (IMSciences)
+
+## **Key Achievements Highlights**
+- Developed multilingual RAG chatbot during GIKI internship  
+- Achieved 3.6 GPA in BS Software Engineering  
+- Selected for Prime Minister's Laptop Scheme (First List)  
+- Led AI/ML workshops for 50+ students as Microsoft Learn Student Ambassador  
+- Moderated international conference sessions on AI and digital transformation  
+
+## **Future Learning Roadmap**
+Currently mastering: LangChain, LlamaIndex, Agentic AI workflows, Advanced RAG techniques, Deployment on cloud platforms (Vercel, Render, Pinecone). Planning to contribute to open-source LLM projects.
+
+## **Personal Values / Work Philosophy**
+Believes in focused excellence ('Focus means saying no to many good opportunities to say yes to a few great ones'), consistency, ethical AI development, and using technology for social good in Pakistan.
+
+## **Location and Time Zone**
+- Location: Peshawar, Khyber Pakhtunkhwa, Pakistan  
+- Time Zone: PKT (UTC+5)
+
+## **Quick Links**
+- GitHub: https://github.com/AdilSaeed0347  
+- LinkedIn: https://www.linkedin.com/in/adil-saeed-9b7b51363/
